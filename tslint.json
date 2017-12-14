@@ -5,6 +5,7 @@
         "linebreak-style": true,
         "no-angle-bracket-type-assertion": true,
         "no-require-imports": true,
+        "semicolon": true,
         "triple-equals": true
     }
 }
