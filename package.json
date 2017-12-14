@@ -1,0 +1,29 @@
+{
+  "name": "emojiopoly",
+  "version": "1.0.0",
+  "description": "Monopoly but with emojis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chuzzy/Emojiopoly.git"
+  },
+  "author": "Chuzzy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chuzzy/Emojiopoly/issues"
+  },
+  "homepage": "https://github.com/Chuzzy/Emojiopoly#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.39",
+    "@types/lodash": "^4.14.90",
+    "@types/socket.io": "^1.4.31"
+  }
+}
