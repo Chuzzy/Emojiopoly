@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "dist",
+        "pretty": true,
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "src/types/*"
+            ]
+        },
+        "sourceMap": true,
+        "target": "es2016"
+    }
+}
