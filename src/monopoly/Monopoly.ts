@@ -31,7 +31,7 @@ namespace Monopoly {
     
     export class Square {
         constructor(
-            public readonly squareType: "go" | "jail" | "gotojail" | "parking" | "property" | "chance" | "chest",
+            public readonly squareType: "go" | "jail" | "gotojail" | "parking" | "property" | "chance" | "chest" | "incometax" | "supertax",
             public readonly property: Property | null
         ) {
             if (squareType !== "property" && property !== null) {
