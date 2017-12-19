@@ -86,9 +86,13 @@ namespace Monopoly {
              */
             bankruptAssetsAlwaysToBank: boolean,
             /**
+             * Whether players can buy mortgaged properties from the bank.
+             */
+            purchaseMortgagedProperties: boolean,
+            /**
              * The money awarded to a player when landing on Free Parking.
              */
-            freeParkingJackpot: 0 | 100 | 200 | 500 | "fines",
+            freeParkingJackpot: number | "fines",
             /**
              * The money awarded to a player when they pass Go.
              */
