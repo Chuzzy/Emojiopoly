@@ -11,7 +11,10 @@ namespace Monopoly {
          * Whether this property is mortgaged.
          */
         public isMortgaged: boolean;
-
+        /**
+         * The player who owns this property.
+         */
+        public owner: Player | null;
         /**
          * Initialize a new Property instance, specifying the name, price and building costs.
          * @param name The name of the property.
