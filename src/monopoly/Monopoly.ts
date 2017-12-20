@@ -171,7 +171,9 @@ namespace Monopoly {
              */
             superTax: number
         }) {
-            
+            playerNames.forEach(name => {
+                this.players.push(new Player(name, this.houseRules.startingMoney, board[0]));
+            });
 
             throw new Error("TODO");
         }
