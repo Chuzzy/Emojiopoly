@@ -37,6 +37,15 @@ namespace Monopoly {
      */
     export class Square {
         public occupants: Player[];
+
+        public addOccupant(occupant: Player) {
+            this.occupants.push(occupant);
+        }
+
+        public removeOccupant(occupant: Player) {
+            this.occupants.splice(this.occupants.indexOf(occupant), 1);
+        }
+
         constructor(
             public readonly squareContents: "go" | "jail" | "gotojail" | "parking" | "chance" | "chest" | "incometax" | "supertax" | Property
         ) {
