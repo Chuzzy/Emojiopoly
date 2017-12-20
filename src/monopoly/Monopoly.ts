@@ -32,6 +32,9 @@ namespace Monopoly {
         }
     }
     
+    /**
+     * A square on the board.
+     */
     export class Square {
         constructor(
             public readonly squareType: "go" | "jail" | "gotojail" | "parking" | "property" | "chance" | "chest" | "incometax" | "supertax",
