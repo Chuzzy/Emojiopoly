@@ -75,7 +75,12 @@ namespace Monopoly {
          */
         public currentTurnIndex: number;
 
-        constructor(public board: Square[], public houseRules: {
+        /**
+         * The players currently in the game.
+         */
+        public players: Player[];
+
+        constructor(public board: Square[], public playerNames: string[], public houseRules: {
             /**
              * Whether players need a monopoly to construct improvements.
              */
