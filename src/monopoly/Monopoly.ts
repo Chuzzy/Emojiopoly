@@ -173,8 +173,6 @@ namespace Monopoly {
                 let newPlayer = new Player(name, this.houseRules.startingMoney, board[0]);
                 board[0].occupants.push(newPlayer);
             });
-
-            throw new Error("TODO");
         }
     }
 }
