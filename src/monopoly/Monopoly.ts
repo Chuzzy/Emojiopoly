@@ -129,6 +129,10 @@ namespace Monopoly {
              */
             landOnGo: "normal" | "double" | "freemove",
             /**
+             * The amount of money players start with.
+             */
+            startingMoney: number,
+            /**
              * How many turns a player is allowed to stay in jail for
              * before being forced to post bail.
              */
