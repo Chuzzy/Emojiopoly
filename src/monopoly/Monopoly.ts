@@ -91,6 +91,33 @@ namespace Monopoly {
          */
         public players: Player[];
 
+        /**
+         * Roll the dice and move the player.
+         */
+        public rollDice() {
+            let dice = [Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1];
+            let total = dice[0] + dice[1];
+            
+            let currentPlayer: Player = this.players[this.currentTurnIndex];
+            let newPosition: number = this.board.indexOf(currentPlayer.currentSquare) + total;
+            
+            // Collect salary if they passed Go.
+            if (newPosition > 39) {
+                currentPlayer.money += this.houseRules.goSalary;
+                newPosition -= 40;
+            }
+
+            // Remove player from old square's occupants.
+            currentPlayer.currentSquare.removeOccupant(currentPlayer);
+
+            // Move player to their new square.
+            let newSquare: Square = this.board[newPosition];
+            newSquare.addOccupant(currentPlayer);
+            currentPlayer.currentSquare = newSquare;
+
+            // TODO: Handle action.
+        }
+
         constructor(public board: Square[], public playerNames: string[], public houseRules: {
             /**
              * Whether players need a monopoly to construct improvements.
