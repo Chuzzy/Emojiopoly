@@ -36,14 +36,10 @@ namespace Monopoly {
      * A square on the board.
      */
     export class Square {
+        public occupants: Player[];
         constructor(
-            public readonly squareType: "go" | "jail" | "gotojail" | "parking" | "chance" | "chest" | "incometax" | "supertax" | Property
+            public readonly squareContents: "go" | "jail" | "gotojail" | "parking" | "chance" | "chest" | "incometax" | "supertax" | Property
         ) {
-            if (squareType !== "property" && property !== null) {
-                throw new Error(`Cannot create a Square with a squareType of ${squareType} if property is not null.`);
-            } else if (squareType === "property" && property === null) {
-                throw new Error("Cannot create a Square with a squareType of property if property is null.");
-            }
         }
     }
 
