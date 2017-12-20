@@ -66,6 +66,10 @@ namespace Monopoly {
          */
         public currentSquare: Square;
         /**
+         * The number of turns this player has been in jail (0 if not in jail).
+         */
+        public turnsInJail: number;
+        /**
          * Initialize a new player.
          * @param name The player's name.
          * @param money The player's starting money.
