@@ -70,6 +70,11 @@ namespace Monopoly {
     }
 
     export class Monopoly {
+        /**
+         * The index of the player whose turn it is.
+         */
+        public currentTurnIndex: number;
+
         constructor(public board: Square[], public houseRules: {
             /**
              * Whether players need a monopoly to construct improvements.
