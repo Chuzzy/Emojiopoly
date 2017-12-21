@@ -87,6 +87,11 @@ namespace Monopoly {
         public currentTurnIndex: number;
 
         /**
+         * The number of consecutive doubles the current player has achieved.
+         */
+        public consecutiveDoubles: number;
+
+        /**
          * The players currently in the game.
          */
         public players: Player[];
@@ -97,10 +102,25 @@ namespace Monopoly {
         public rollDice() {
             let dice = [Math.floor(Math.random() * 6) + 1, Math.floor(Math.random() * 6) + 1];
             let total = dice[0] + dice[1];
-            
+
             let currentPlayer: Player = this.players[this.currentTurnIndex];
             let newPosition: number = this.board.indexOf(currentPlayer.currentSquare) + total;
-            
+                        
+            if (dice[0] === dice[1]) {
+                if (++this.consecutiveDoubles === this.houseRules.maxConsecutiveDoubles) {
+                    // Send player to jail.
+                    currentPlayer.currentSquare.removeOccupant(currentPlayer);
+
+                    currentPlayer.turnsInJail = 1;
+                    currentPlayer.currentSquare = this.board[10];
+                    currentPlayer.currentSquare.addOccupant(currentPlayer);
+
+                    this.consecutiveDoubles = 0;
+                } else {
+                    this.consecutiveDoubles = 0;
+                }
+            }
+
             // Collect salary if they passed Go.
             if (newPosition > 39) {
                 currentPlayer.money += this.houseRules.goSalary;
@@ -116,6 +136,14 @@ namespace Monopoly {
             currentPlayer.currentSquare = newSquare;
 
             // TODO: Handle action.
+        }
+
+        /**
+         * Finish this person's turn.
+         */
+        public finishTurn() {
+            if (this.consecutiveDoubles === 0)
+                this.currentTurnIndex = ++this.currentTurnIndex % this.players.length;
         }
 
         constructor(public board: Square[], public playerNames: string[], public houseRules: {
@@ -180,6 +208,11 @@ namespace Monopoly {
              * to get out of jail.
              */
             bailAmount: number,
+            /**
+             * The number of consecutive doubles a player is allowed to roll
+             * before being sent to jail.
+             */
+            maxConsecutiveDoubles: number,
             /**
              * The number of houses available. Max 88.
              */
