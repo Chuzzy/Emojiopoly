@@ -67,6 +67,21 @@ $center-space-width: 81.9%;
     font-size: $board-size / 40;
 }
 
+@mixin black-border($top, $right, $bottom, $left) {
+    @if $top {
+        border-top: 1px solid black;
+    }
+    @if $right {
+        border-right: 1px solid black;
+    }
+    @if $bottom {
+        border-bottom: 1px solid black;
+    }
+    @if $left {
+        border-left: 1px solid black;
+    }
+}
+
 .corner {
     @include square;
     font-size: $board-size / 20;
@@ -78,21 +93,13 @@ $center-space-width: 81.9%;
     border: 1px solid black;
 }
 #jail {
-    border: 1px solid black;
-    border-right: none;
+    @include black-border(true, false, true, true);
 }
 #parking {
-    border: {
-        top: 1px solid black;
-        left: 1px solid black;
-    }
+    @include black-border(true, false, false, true);
 }
 #gotojail {
-    border: {
-        top: 1px solid black;
-        left: 1px solid black;
-        right: 1px solid black;
-    }
+    @include black-border(true, true, false, true);
 }
 
 #{$square-selector} {
