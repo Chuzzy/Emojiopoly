@@ -8,7 +8,8 @@
         },
         {
             "name": "question",
-            "symbol": "2753"
+            "symbol": "2753",
+            "subtext": "WTF"
         },
         {
             "name": "property-hotdog",
@@ -66,7 +67,8 @@
         },
         {
             "name": "exclamation",
-            "symbol": "2757"
+            "symbol": "2757",
+            "subtext": "OMG"
         },
         {
             "name": "property-mosque",
@@ -81,7 +83,10 @@
         },
         {
             "name": "property-sun",
-            "symbol": "2600",
+            "symbol": [
+                "2600",
+                "FE0F"
+            ],
             "subtext": "160",
             "color": "pink"
         },
@@ -118,7 +123,8 @@
         },
         {
             "name": "exclamation",
-            "symbol": "2757"
+            "symbol": "2757",
+            "subtext": "OMG"
         },
         {
             "name": "property-liberty",
@@ -133,7 +139,8 @@
         },
         {
             "name": "question",
-            "symbol": "2753"
+            "symbol": "2753",
+            "subtext": "WTF"
         },
         {
             "name": "property-castle",
@@ -168,7 +175,8 @@
         },
         {
             "name": "question",
-            "symbol": "2753"
+            "symbol": "2753",
+            "subtext": "WTF"
         },
         {
             "name": "property-seenoevil",
@@ -194,7 +202,8 @@
         },
         {
             "name": "exclamation",
-            "symbol": "2757"
+            "symbol": "2757",
+            "subtext": "OMG"
         },
         {
             "name": "property-sweat",
