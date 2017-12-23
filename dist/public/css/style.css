@@ -5,8 +5,8 @@ div {
 #board {
   display: flex;
   flex-direction: column;
-  width: 750px;
-  height: 750px;
+  width: 700px;
+  height: 700px;
   border: none;
   background-color: #e5e5e5; }
 
@@ -43,8 +43,8 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 18.75px;
-  font-size: 37.5px;
+  font-size: 17.5px;
+  font-size: 35px;
   flex-grow: 2;
   width: 200%; }
 
@@ -70,14 +70,14 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 18.75px;
+  font-size: 17.5px;
   flex-grow: 1;
   flex-direction: column; }
   [id^="property"] .property-symbol, #question .property-symbol, #exclamation .property-symbol, #tax .property-symbol, #supertax .property-symbol {
     display: block;
     border: none; }
   [id^="property"] .sub, #question .sub, #exclamation .sub, #tax .sub, #supertax .sub {
-    font-size: 16.6666666667px;
+    font-size: 15.5555555556px;
     display: block;
     clear: both;
     border: none; }
