@@ -6,18 +6,26 @@ mixin row(data)
                 .sub
                     =val.subtext
 
-#board
-    #top
-        .corner#parking &#x1F698;
-        +row(boardData.top)
-        .corner#gotojail &#x1F46E;
-    #center
-        #left
-            +row(boardData.left)
-        #center-space
-        #right
-            +row(boardData.right)
-    #bottom
-        .corner#jail &#x1F693;
-        +row(boardData.bottom)
-        .corner#go &#x1F4B0;
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title Emojiopoly
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+    body
+        #board
+            #top
+                .corner#parking &#x1F698;
+                +row(boardData.top)
+                .corner#gotojail &#x1F46E;
+            #center
+                #left
+                    +row(boardData.left)
+                #center-space
+                #right
+                    +row(boardData.right)
+            #bottom
+                .corner#jail &#x1F693;
+                +row(boardData.bottom)
+                .corner#go &#x1F4B0;
