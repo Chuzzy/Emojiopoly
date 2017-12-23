@@ -1,10 +1,10 @@
 mixin row(data)
     each val in data
-            div(id=val.name, class=val.color)
-                .property-symbol
-                    !=("&#x" + (Array.isArray(val.symbol) ? val.symbol.reduce((sum, elem) => sum + "&#x" + elem + ";" ) : val.symbol))
-                .sub
-                    =val.subtext
+        div(id=val.name, class=val.color)
+            .property-symbol
+                !=("&#x" + (Array.isArray(val.symbol) ? val.symbol.reduce((sum, elem) => sum + "&#x" + elem + ";" ) : val.symbol))
+            .sub
+                =val.subtext
 
 doctype html
 html(lang="en")
@@ -17,15 +17,15 @@ html(lang="en")
         #board
             #top
                 .corner#parking &#x1F698;
-                +row(boardData.top)
+                +row(top)
                 .corner#gotojail &#x1F46E;
             #center
                 #left
-                    +row(boardData.left)
+                    +row(left)
                 #center-space
                 #right
-                    +row(boardData.right)
+                    +row(right)
             #bottom
                 .corner#jail &#x1F693;
-                +row(boardData.bottom)
+                +row(bottom)
                 .corner#go &#x1F4B0;

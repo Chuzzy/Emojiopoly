@@ -4,6 +4,7 @@
   "description": "Monopoly but with emojis",
   "main": "index.js",
   "scripts": {
+    "build-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
