@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/express": "^4.0.39",
     "@types/lodash": "^4.14.90",
-    "@types/socket.io": "^1.4.31"
+    "@types/socket.io": "^1.4.31",
+    "node-sass": "^4.7.2"
   }
 }
