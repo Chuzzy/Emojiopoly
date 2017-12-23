@@ -1,0 +1,109 @@
+div {
+  font-family: sans-serif;
+  box-sizing: border-box; }
+
+#board {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  height: 750px;
+  border: none;
+  background-color: #e5e5e5; }
+
+#top, #bottom {
+  height: 15%;
+  width: 100%;
+  display: flex; }
+  #top [id^="property"], #top #question, #top #exclamation, #top #tax, #top #supertax, #bottom [id^="property"], #bottom #question, #bottom #exclamation, #bottom #tax, #bottom #supertax {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black; }
+
+#center {
+  display: flex;
+  height: 85%; }
+
+#center-space {
+  display: flex;
+  flex-grow: 10;
+  width: 81.9%; }
+
+#left, #right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  width: 18.1%; }
+  #left [id^="property"], #left #question, #left #exclamation, #left #tax, #left #supertax, #right [id^="property"], #right #question, #right #exclamation, #right #tax, #right #supertax {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black; }
+
+.corner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18.75px;
+  font-size: 37.5px;
+  flex-grow: 2;
+  width: 200%; }
+
+#go {
+  border: 1px solid black; }
+
+#jail {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black; }
+
+#parking {
+  border-top: 1px solid black;
+  border-left: 1px solid black; }
+
+#gotojail {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black; }
+
+[id^="property"], #question, #exclamation, #tax, #supertax {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18.75px;
+  flex-grow: 1;
+  flex-direction: column; }
+  [id^="property"] .property-symbol, #question .property-symbol, #exclamation .property-symbol, #tax .property-symbol, #supertax .property-symbol {
+    display: block;
+    border: none; }
+  [id^="property"] .sub, #question .sub, #exclamation .sub, #tax .sub, #supertax .sub {
+    font-size: 16.6666666667px;
+    display: block;
+    clear: both;
+    border: none; }
+
+.brown {
+  background-color: #955436; }
+
+.lightblue {
+  background-color: #aae0fa; }
+
+.pink {
+  background-color: #d93a96; }
+
+.orange {
+  background-color: #f7941d; }
+
+.red {
+  background-color: #ed1b24; }
+
+.yellow {
+  background-color: #fef200; }
+
+.green {
+  background-color: #1fb25a; }
+
+.blue {
+  background-color: #0072bb; }
+
+/*# sourceMappingURL=style.css.map */
