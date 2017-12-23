@@ -4,6 +4,7 @@
   "description": "Monopoly but with emojis",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build-pug && npm run build-sass",
     "build-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty",
     "build-sass": "sass --scss --update src/public/sass:dist/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
