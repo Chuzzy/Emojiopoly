@@ -5,240 +5,341 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Emojiopoly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div id="board">
-      <div id="top">
-        <div class="corner" id="parking">&#x1F698;</div>
-        <div class="red" id="property-pizza">
-          <div class="property-symbol">&#x1F355
-          </div>
-          <div class="sub">220
-          </div>
-        </div>
-        <div id="question">
-          <div class="property-symbol">&#x2753
-          </div>
-          <div class="sub">WTF
+    <div id="main-container">
+      <div class="side-panel" id="player-list">
+        <div class="player current-turn">
+          <div class="player-icon">&#x1F602;</div>
+          <div class="player-info">
+            <div class="player-name">Chuzzy</div>
+            <div class="player-cash">&#x1F4B7;1500 (Assets: 1500)</div>
+            <div class="player-location">HOTDOG</div>
           </div>
         </div>
-        <div class="red" id="property-hotdog">
-          <div class="property-symbol">&#x1F32D
-          </div>
-          <div class="sub">220
-          </div>
-        </div>
-        <div class="red" id="property-hamburger">
-          <div class="property-symbol">&#x1F354
-          </div>
-          <div class="sub">240
+        <div class="player">
+          <div class="player-icon">&#x1F62E;</div>
+          <div class="player-info">
+            <div class="player-name">Choosty</div>
+            <div class="player-cash">&#x1F4B5;230 (Assets: 890)</div>
+            <div class="player-location">UNDER ARREST</div>
           </div>
         </div>
-        <div id="property-airplane">
-          <div class="property-symbol">&#x2708
-          </div>
-          <div class="sub">200
-          </div>
-        </div>
-        <div class="yellow" id="property-basketball">
-          <div class="property-symbol">&#x1F3C0
-          </div>
-          <div class="sub">260
+        <div class="player">
+          <div class="player-icon">&#x1F914;</div>
+          <div class="player-info">
+            <div class="player-name">Crusty</div>
+            <div class="player-cash">&#x1F4B5;1 (Assets: 1)</div>
+            <div class="player-location">POLICE CAR</div>
           </div>
         </div>
-        <div class="yellow" id="property-baseball">
-          <div class="property-symbol">&#x26BE
-          </div>
-          <div class="sub">260
-          </div>
+        <div id="game-log">
+          <ul>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+            <li>Choosty is under arrest!</li>
+          </ul>
         </div>
-        <div id="property-water">
-          <div class="property-symbol">&#x1F30A
-          </div>
-          <div class="sub">150
-          </div>
-        </div>
-        <div class="yellow" id="property-football">
-          <div class="property-symbol">&#x26BD
-          </div>
-          <div class="sub">280
-          </div>
-        </div>
-        <div class="corner" id="gotojail">&#x1F46E;</div>
       </div>
-      <div id="center">
-        <div id="left">
-          <div class="orange" id="property-synagogue">
-            <div class="property-symbol">&#x1F54D
+      <div id="board">
+        <div id="top">
+          <div class="corner" id="parking">&#x1F698;</div>
+          <div class="red" id="property-pizza">
+            <div class="property-symbol">&#x1F355;
             </div>
-            <div class="sub">200
-            </div>
-          </div>
-          <div class="orange" id="property-church">
-            <div class="property-symbol">&#x26EA
-            </div>
-            <div class="sub">180
+            <div class="sub">220
             </div>
           </div>
-          <div id="exclamation">
-            <div class="property-symbol">&#x2757
-            </div>
-            <div class="sub">OMG
-            </div>
-          </div>
-          <div class="orange" id="property-mosque">
-            <div class="property-symbol">&#x1F54C
-            </div>
-            <div class="sub">180
-            </div>
-          </div>
-          <div id="property-taxi">
-            <div class="property-symbol">&#x1F695
-            </div>
-            <div class="sub">200
-            </div>
-          </div>
-          <div class="pink" id="property-sun">
-            <div class="property-symbol">&#x2600&#xFE0F;
-            </div>
-            <div class="sub">160
-            </div>
-          </div>
-          <div class="pink" id="property-moon">
-            <div class="property-symbol">&#x1F319
-            </div>
-            <div class="sub">140
-            </div>
-          </div>
-          <div id="property-lightbulb">
-            <div class="property-symbol">&#x1F4A1
-            </div>
-            <div class="sub">150
-            </div>
-          </div>
-          <div class="pink" id="property-star">
-            <div class="property-symbol">&#x2B50
-            </div>
-            <div class="sub">140
-            </div>
-          </div>
-        </div>
-        <div id="center-space"></div>
-        <div id="right">
-          <div class="green" id="property-kaaba">
-            <div class="property-symbol">&#x1F54B
-            </div>
-            <div class="sub">300
-            </div>
-          </div>
-          <div class="green" id="property-tokyotower">
-            <div class="property-symbol">&#x1F5FC
-            </div>
-            <div class="sub">300
-            </div>
-          </div>
-          <div id="exclamation">
-            <div class="property-symbol">&#x2757
-            </div>
-            <div class="sub">OMG
-            </div>
-          </div>
-          <div class="green" id="property-liberty">
-            <div class="property-symbol">&#x1F5FD
-            </div>
-            <div class="sub">320
-            </div>
-          </div>
-          <div id="property-locomotive">
-            <div class="property-symbol">&#x1F682
-            </div>
-            <div class="sub">200
-            </div>
-          </div>
-          <div id="question">
-            <div class="property-symbol">&#x2753
+          <div id="question-2">
+            <div class="property-symbol">&#x2753;&#xFE0F;
             </div>
             <div class="sub">WTF
             </div>
           </div>
-          <div class="blue" id="property-castle">
-            <div class="property-symbol">&#x1F3EF
+          <div class="red" id="property-hotdog">
+            <div class="property-symbol">&#x1F32D;
             </div>
-            <div class="sub">350
-            </div>
-          </div>
-          <div id="supertax">
-            <div class="property-symbol">&#x1F44E
-            </div>
-            <div class="sub">-100
+            <div class="sub">220
             </div>
           </div>
-          <div class="blue" id="property-lovehotel">
-            <div class="property-symbol">&#x1F3E9
+          <div class="red" id="property-hamburger">
+            <div class="property-symbol">&#x1F354;
             </div>
-            <div class="sub">400
+            <div class="sub">240
+            </div>
+          </div>
+          <div id="property-airplane">
+            <div class="property-symbol">&#x2708;&#xFE0F;
+            </div>
+            <div class="sub">200
+            </div>
+          </div>
+          <div class="yellow" id="property-basketball">
+            <div class="property-symbol">&#x1F3C0;
+            </div>
+            <div class="sub">260
+            </div>
+          </div>
+          <div class="yellow" id="property-baseball">
+            <div class="property-symbol">&#x26BE;&#xFE0F;
+            </div>
+            <div class="sub">260
+            </div>
+          </div>
+          <div id="property-water">
+            <div class="property-symbol">&#x1F30A;
+            </div>
+            <div class="sub">150
+            </div>
+          </div>
+          <div class="yellow" id="property-football">
+            <div class="property-symbol">&#x26BD;&#xFE0F;
+            </div>
+            <div class="sub">280
+            </div>
+          </div>
+          <div class="corner" id="gotojail">&#x1F46E;</div>
+        </div>
+        <div id="center">
+          <div id="left">
+            <div class="orange" id="property-synagogue">
+              <div class="property-symbol">&#x1F54D;
+              </div>
+              <div class="sub">200
+              </div>
+            </div>
+            <div class="orange" id="property-church">
+              <div class="property-symbol">&#x26EA;&#xFE0F;
+              </div>
+              <div class="sub">180
+              </div>
+            </div>
+            <div id="exclamation-2">
+              <div class="property-symbol">&#x2757;&#xFE0F;
+              </div>
+              <div class="sub">OMG
+              </div>
+            </div>
+            <div class="orange" id="property-mosque">
+              <div class="property-symbol">&#x1F54C;
+              </div>
+              <div class="sub">180
+              </div>
+            </div>
+            <div id="property-taxi">
+              <div class="property-symbol">&#x1F695;
+              </div>
+              <div class="sub">200
+              </div>
+            </div>
+            <div class="pink" id="property-sun">
+              <div class="property-symbol">&#x2600;&#xFE0F;
+              </div>
+              <div class="sub">160
+              </div>
+            </div>
+            <div class="pink" id="property-moon">
+              <div class="property-symbol">&#x1F319;
+              </div>
+              <div class="sub">140
+              </div>
+            </div>
+            <div id="property-lightbulb">
+              <div class="property-symbol">&#x1F4A1;
+              </div>
+              <div class="sub">150
+              </div>
+            </div>
+            <div class="pink" id="property-star">
+              <div class="property-symbol">&#x2B50;&#xFE0F;
+              </div>
+              <div class="sub">140
+              </div>
+            </div>
+          </div>
+          <div id="center-space"></div>
+          <div id="right">
+            <div class="green" id="property-kaaba">
+              <div class="property-symbol">&#x1F54B;
+              </div>
+              <div class="sub">300
+              </div>
+            </div>
+            <div class="green" id="property-tokyotower">
+              <div class="property-symbol">&#x1F5FC;
+              </div>
+              <div class="sub">300
+              </div>
+            </div>
+            <div id="exclamation-3">
+              <div class="property-symbol">&#x2757;&#xFE0F;
+              </div>
+              <div class="sub">OMG
+              </div>
+            </div>
+            <div class="green" id="property-liberty">
+              <div class="property-symbol">&#x1F5FD;
+              </div>
+              <div class="sub">320
+              </div>
+            </div>
+            <div id="property-locomotive">
+              <div class="property-symbol">&#x1F682;
+              </div>
+              <div class="sub">200
+              </div>
+            </div>
+            <div id="question-3">
+              <div class="property-symbol">&#x2753;&#xFE0F;
+              </div>
+              <div class="sub">WTF
+              </div>
+            </div>
+            <div class="blue" id="property-castle">
+              <div class="property-symbol">&#x1F3EF;
+              </div>
+              <div class="sub">350
+              </div>
+            </div>
+            <div id="supertax">
+              <div class="property-symbol">&#x1F44E;
+              </div>
+              <div class="sub">-100
+              </div>
+            </div>
+            <div class="blue" id="property-lovehotel">
+              <div class="property-symbol">&#x1F3E9;
+              </div>
+              <div class="sub">400
+              </div>
             </div>
           </div>
         </div>
+        <div id="bottom">
+          <div class="corner" id="jail">&#x1F693;</div>
+          <div class="lightblue" id="property-speaknoevil">
+            <div class="property-symbol">&#x1F64A;
+            </div>
+            <div class="sub">120
+            </div>
+          </div>
+          <div class="lightblue" id="property-hearnoevil">
+            <div class="property-symbol">&#x1F649;
+            </div>
+            <div class="sub">100
+            </div>
+          </div>
+          <div id="question-1">
+            <div class="property-symbol">&#x2753;&#xFE0F;
+            </div>
+            <div class="sub">WTF
+            </div>
+          </div>
+          <div class="lightblue" id="property-seenoevil">
+            <div class="property-symbol">&#x1F648;
+            </div>
+            <div class="sub">100
+            </div>
+          </div>
+          <div id="property-bus">
+            <div class="property-symbol">&#x1F68C;
+            </div>
+            <div class="sub">200
+            </div>
+          </div>
+          <div id="tax">
+            <div class="property-symbol">&#x1F595;
+            </div>
+            <div class="sub">-200
+            </div>
+          </div>
+          <div class="brown" id="property-aubergine">
+            <div class="property-symbol">&#x1F346;
+            </div>
+            <div class="sub">60
+            </div>
+          </div>
+          <div id="exclamation-1">
+            <div class="property-symbol">&#x2757;&#xFE0F;
+            </div>
+            <div class="sub">OMG
+            </div>
+          </div>
+          <div class="brown" id="property-sweat">
+            <div class="property-symbol">&#x1F4A6;
+            </div>
+            <div class="sub">60
+            </div>
+          </div>
+          <div class="corner" id="go">&#x1F4B0;</div>
+        </div>
+        <div class="player-token" id="player-Chuzzy">&#x1F602;</div>
+        <div class="player-token" id="player-Choosty">&#x1F62E;</div>
+        <div class="player-token" id="player-Crusty">&#x1F914;</div>
       </div>
-      <div id="bottom">
-        <div class="corner" id="jail">&#x1F693;</div>
-        <div class="lightblue" id="property-speaknoevil">
-          <div class="property-symbol">&#x1F64A
-          </div>
-          <div class="sub">120
-          </div>
+      <div class="side-panel" id="game-info">
+        <div id="button-wrapper">
+          <button id="manage-button">&#x1F528; Manage</button>
+          <button id="trade-button">&#x1F504; Trade</button>
+          <button id="bankrupt-button">&#x1F4B8; Bankrupt</button>
         </div>
-        <div class="lightblue" id="property-hearnoevil">
-          <div class="property-symbol">&#x1F649
-          </div>
-          <div class="sub">100
-          </div>
+        <div id="selected-property">
+          <div class="red" id="prop-name">HOTDOG</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Cost</th>
+                <th>220</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Fee</b></td>
+                <td><b>18</b></td>
+              </tr>
+              <tr>
+                <td>&#x1F44D;</td>
+                <td>90</td>
+              </tr>
+              <tr>
+                <td>&#x1F44D;&#x1F44D;</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>&#x1F44D;&#x1F44D;&#x1F44D;</td>
+                <td>700</td>
+              </tr>
+              <tr> 
+                <td>&#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;</td>
+                <td>875</td>
+              </tr>
+              <tr> 
+                <td>&#x1F44C;</td>
+                <td>1050</td>
+              </tr>
+              <tr> 
+                <td>Cost per &#x1F44D;/&#x1F44C;</td>
+                <td>130</td>
+              </tr>
+              <tr> 
+                <td>Disabled value</td>
+                <td>110</td>
+              </tr>
+              <tr>
+                <td>Cost to re-enable</td>
+                <td>121</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div id="question">
-          <div class="property-symbol">&#x2753
-          </div>
-          <div class="sub">WTF
-          </div>
-        </div>
-        <div class="lightblue" id="property-seenoevil">
-          <div class="property-symbol">&#x1F648
-          </div>
-          <div class="sub">100
-          </div>
-        </div>
-        <div id="property-bus">
-          <div class="property-symbol">&#x1F68C
-          </div>
-          <div class="sub">200
-          </div>
-        </div>
-        <div id="tax">
-          <div class="property-symbol">&#x1F595
-          </div>
-          <div class="sub">-200
-          </div>
-        </div>
-        <div class="brown" id="property-aubergine">
-          <div class="property-symbol">&#x1F346
-          </div>
-          <div class="sub">60
-          </div>
-        </div>
-        <div id="exclamation">
-          <div class="property-symbol">&#x2757
-          </div>
-          <div class="sub">OMG
-          </div>
-        </div>
-        <div class="brown" id="property-sweat">
-          <div class="property-symbol">&#x1F4A6
-          </div>
-          <div class="sub">60
-          </div>
-        </div>
-        <div class="corner" id="go">&#x1F4B0;</div>
       </div>
     </div>
   </body>

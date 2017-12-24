@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npm run build-pug && npm run build-sass",
     "build-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty",
+    "watch-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty --watch",
     "build-sass": "sass --scss --update src/public/sass:dist/public/css",
+    "watch-sass": "sass --scss --watch src/public/sass:dist/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

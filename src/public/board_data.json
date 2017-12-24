@@ -7,8 +7,11 @@
             "subtext": "220"
         },
         {
-            "name": "question",
-            "symbol": "2753",
+            "name": "question-2",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
             "subtext": "WTF"
         },
         {
@@ -25,7 +28,10 @@
         },
         {
             "name": "property-airplane",
-            "symbol": "2708",
+            "symbol": [
+                "2708",
+                "FE0F"
+            ],
             "subtext": "200"
         },
         {
@@ -36,7 +42,10 @@
         },
         {
             "name": "property-baseball",
-            "symbol": "26BE",
+            "symbol": [
+                "26BE",
+                "FE0F"
+            ],
             "subtext": "260",
             "color": "yellow"
         },
@@ -47,7 +56,10 @@
         },
         {
             "name": "property-football",
-            "symbol": "26BD",
+            "symbol": [
+                "26BD",
+                "FE0F"
+            ],
             "subtext": "280",
             "color": "yellow"
         }
@@ -61,13 +73,19 @@
         },
         {
             "name": "property-church",
-            "symbol": "26EA",
+            "symbol": [
+                "26EA",
+                "FE0F"
+            ],
             "subtext": "180",
             "color": "orange"
         },
         {
-            "name": "exclamation",
-            "symbol": "2757",
+            "name": "exclamation-2",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
             "subtext": "OMG"
         },
         {
@@ -103,7 +121,10 @@
         },
         {
             "name": "property-star",
-            "symbol": "2B50",
+            "symbol": [
+                "2B50",
+                "FE0F"
+            ],
             "subtext": "140",
             "color": "pink"
         }
@@ -122,8 +143,11 @@
             "color": "green"
         },
         {
-            "name": "exclamation",
-            "symbol": "2757",
+            "name": "exclamation-3",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
             "subtext": "OMG"
         },
         {
@@ -138,8 +162,11 @@
             "subtext": "200"
         },
         {
-            "name": "question",
-            "symbol": "2753",
+            "name": "question-3",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
             "subtext": "WTF"
         },
         {
@@ -174,8 +201,11 @@
             "color": "lightblue"
         },
         {
-            "name": "question",
-            "symbol": "2753",
+            "name": "question-1",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
             "subtext": "WTF"
         },
         {
@@ -201,8 +231,11 @@
             "color": "brown"
         },
         {
-            "name": "exclamation",
-            "symbol": "2757",
+            "name": "exclamation-1",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
             "subtext": "OMG"
         },
         {

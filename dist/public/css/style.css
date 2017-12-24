@@ -1,6 +1,58 @@
+html {
+  background-color: #1a1a1a;
+  color: #e5e5e5; }
+
+@font-face {
+  font-family: "Kabel";
+  src: url("../fonts/Kabel Regular.ttf"); }
+@font-face {
+  font-family: "Kabel";
+  src: url("../fonts/Kabel Medium Regular.ttf");
+  font-weight: bold; }
 div {
-  font-family: sans-serif;
+  font-family: "Kabel", sans-serif;
   box-sizing: border-box; }
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+
+.side-panel {
+  flex-grow: 1;
+  /* This rule stops the selected-property div from casuing the right side panel
+   * to change the size of the board.
+   */
+  width: 1%; }
+
+#player-list {
+  padding-right: 10px; }
+  #player-list .current-turn {
+    background-color: #4d4d4d; }
+  #player-list .player {
+    display: flex;
+    margin: 5px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px; }
+    #player-list .player .player-icon {
+      font-size: 2.6em; }
+  #player-list #game-log {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+    max-height: 30%;
+    overflow: auto;
+    padding: 10px;
+    margin: 30px; }
+    #player-list #game-log ul li {
+      list-style-type: none; }
+  #player-list #game-log:before {
+    content: "GAME LOG:"; }
+
+.player-token {
+  position: absolute;
+  font-size: 23.3333333333px; }
 
 #board {
   display: flex;
@@ -8,13 +60,14 @@ div {
   width: 700px;
   height: 700px;
   border: none;
-  background-color: #e5e5e5; }
+  background-color: #e5e5e5;
+  color: #1a1a1a; }
 
 #top, #bottom {
   height: 15%;
   width: 100%;
   display: flex; }
-  #top [id^="property"], #top #question, #top #exclamation, #top #tax, #top #supertax, #bottom [id^="property"], #bottom #question, #bottom #exclamation, #bottom #tax, #bottom #supertax {
+  #top [id^="property"], #top [id^="question"], #top [id^="exclamation"], #top #tax, #top #supertax, #bottom [id^="property"], #bottom [id^="question"], #bottom [id^="exclamation"], #bottom #tax, #bottom #supertax {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black; }
@@ -33,7 +86,7 @@ div {
   flex-direction: column;
   flex-grow: 2;
   width: 18.1%; }
-  #left [id^="property"], #left #question, #left #exclamation, #left #tax, #left #supertax, #right [id^="property"], #right #question, #right #exclamation, #right #tax, #right #supertax {
+  #left [id^="property"], #left [id^="question"], #left [id^="exclamation"], #left #tax, #left #supertax, #right [id^="property"], #right [id^="question"], #right [id^="exclamation"], #right #tax, #right #supertax {
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black; }
@@ -65,7 +118,7 @@ div {
   border-right: 1px solid black;
   border-left: 1px solid black; }
 
-[id^="property"], #question, #exclamation, #tax, #supertax {
+[id^="property"], [id^="question"], [id^="exclamation"], #tax, #supertax {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -73,10 +126,10 @@ div {
   font-size: 17.5px;
   flex-grow: 1;
   flex-direction: column; }
-  [id^="property"] .property-symbol, #question .property-symbol, #exclamation .property-symbol, #tax .property-symbol, #supertax .property-symbol {
+  [id^="property"] .property-symbol, [id^="question"] .property-symbol, [id^="exclamation"] .property-symbol, #tax .property-symbol, #supertax .property-symbol {
     display: block;
     border: none; }
-  [id^="property"] .sub, #question .sub, #exclamation .sub, #tax .sub, #supertax .sub {
+  [id^="property"] .sub, [id^="question"] .sub, [id^="exclamation"] .sub, #tax .sub, #supertax .sub {
     font-size: 15.5555555556px;
     display: block;
     clear: both;
@@ -105,5 +158,54 @@ div {
 
 .blue {
   background-color: #0072bb; }
+
+#game-info {
+  padding-left: 10px; }
+
+#button-wrapper {
+  display: flex; }
+
+button {
+  font-family: inherit !important;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  flex: 1; }
+
+#manage-button {
+  background-color: #f2ff3c; }
+
+#manage-button:hover {
+  background-color: #f9ffa2; }
+
+#manage-button:active {
+  background-color: #c7d500; }
+
+#trade-button {
+  background-color: #2ada2a; }
+
+#trade-button:hover {
+  background-color: #81e981; }
+
+#trade-button:active {
+  background-color: #178717; }
+
+#bankrupt-button {
+  background-color: #ff1b1b; }
+
+#bankrupt-button:hover {
+  background-color: #ff8181; }
+
+#bankrupt-button:active {
+  background-color: #b40000; }
+
+#selected-property {
+  background-color: #e5e5e5;
+  color: #1a1a1a;
+  text-align: center; }
+  #selected-property #prop-name {
+    padding: 10px 0px; }
+  #selected-property table {
+    width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,68 @@
+$manage-button-color: #f2ff3c;
+$trade-button-color: #2ada2a;
+$bankrupt-button-color: #ff1b1b;
+
+#game-info {
+    padding-left: 10px;
+}
+
+#button-wrapper {
+    display: flex;
+}
+
+button {
+    font-family: inherit !important;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    flex: 1;
+}
+
+#manage-button {
+    background-color: $manage-button-color;
+}
+
+#manage-button:hover {
+    background-color: lighten($manage-button-color, 20);
+}
+
+#manage-button:active {
+    background-color: darken($manage-button-color, 20);
+}
+
+#trade-button {
+    background-color: $trade-button-color;
+}
+
+#trade-button:hover {
+    background-color: lighten($trade-button-color, 20);
+}
+
+#trade-button:active {
+    background-color: darken($trade-button-color, 20);
+}
+
+#bankrupt-button {
+    background-color: $bankrupt-button-color;
+}
+
+#bankrupt-button:hover {
+    background-color: lighten($bankrupt-button-color, 20);
+}
+
+#bankrupt-button:active {
+    background-color: darken($bankrupt-button-color, 20);
+}
+
+#selected-property {
+    background-color: $nearly-white;
+    color: $nearly-black;
+    text-align: center;
+
+    #prop-name {
+        padding: 10px 0px;
+    }
+    table {
+        width: 100%;
+    }
+}
