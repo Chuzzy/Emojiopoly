@@ -1,0 +1,48 @@
+
+$nearly-black: lighten($color: #000000, $amount: 10);
+$nearly-white: #e5e5e5;
+
+html {
+    background-color: $nearly-black;
+    color: $nearly-white;
+}
+
+@font-face {
+    font-family: "Kabel";
+    src: url("../fonts/Kabel Regular.ttf");
+}
+@font-face {
+    font-family: "Kabel";
+    src: url("../fonts/Kabel Medium Regular.ttf");
+    font-weight: bold;
+}
+
+div {
+    font: {
+        family: "Kabel", sans-serif;
+    }
+    box-sizing: border-box;
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.side-panel {
+    flex-grow: 1;
+    /* This rule stops the selected-property div from casuing the right side panel
+     * to change the size of the board.
+     */
+    width: 1%;
+}
+
+// Player list
+@import "player_list";
+
+// Board style
+@import "board";
+
+// Game information and management
+@import "game_info";

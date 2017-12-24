@@ -1,0 +1,149 @@
+$board-size: 700px;
+// Selects property, wtf, omg and tax squares on the board.
+$square-selector: "[id^=\"property\"],[id^=\"question\"],[id^=\"exclamation\"],#tax,#supertax";
+
+.player-token {
+    position: absolute;
+    font-size: $board-size / 30;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    width: $board-size;
+    height: $board-size;
+    border: none;
+    background-color: $nearly-white;
+    color: $nearly-black;
+}
+
+// Top and bottom rows of the board
+#top, #bottom {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    
+    #{$square-selector} {
+        border: {
+            top: 1px solid black;
+            bottom: 1px solid black;
+            left: 1px solid black;
+        }
+    }
+}
+
+#center {
+    display: flex;
+    height: 85%;
+}
+$center-space-width: 81.9%;
+#center-space {
+    display: flex;
+    flex-grow: 10;
+    width: $center-space-width;
+}
+
+#left, #right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    width: 100% - $center-space-width;
+    
+    #{$square-selector} {
+        border: {
+            top: 1px solid black;
+            left: 1px solid black;
+            right: 1px solid black;
+        }
+    }
+}
+
+@mixin square {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: $board-size / 40;
+}
+
+// Adds a 1px solid black border on certain edges.
+@mixin black-border($top, $right, $bottom, $left) {
+    @if $top {
+        border-top: 1px solid black;
+    }
+    @if $right {
+        border-right: 1px solid black;
+    }
+    @if $bottom {
+        border-bottom: 1px solid black;
+    }
+    @if $left {
+        border-left: 1px solid black;
+    }
+}
+
+// Corner squares
+.corner {
+    @include square;
+    font-size: $board-size / 20;
+    flex-grow: 2;
+    width: 200%;
+}
+
+#go {
+    border: 1px solid black;
+}
+#jail {
+    @include black-border(true, false, true, true);
+}
+#parking {
+    @include black-border(true, false, false, true);
+}
+#gotojail {
+    @include black-border(true, true, false, true);
+}
+
+// Normal squares
+#{$square-selector} {
+    @include square;
+    flex-grow: 1;
+    flex-direction: column;
+
+    .property-symbol {
+        display: block;
+        border: none;
+    }
+
+    .sub {
+        font-size: $board-size / 45;
+        display: block;
+        clear: both;
+        border: none;
+    }
+}
+
+// Property colors
+.brown {
+    background-color: #955436;
+}
+.lightblue {
+    background-color: #aae0fa;
+}
+.pink {
+    background-color: #d93a96;
+}
+.orange {
+    background-color: #f7941d;
+}
+.red {
+    background-color: #ed1b24;
+}
+.yellow {
+    background-color: #fef200;
+}
+.green {
+    background-color: #1fb25a;
+}
+.blue {
+    background-color: #0072bb;
+}

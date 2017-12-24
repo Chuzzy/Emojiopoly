@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Sass cache
+.sass-cache/
+
+# Font files
+dist/public/fonts/

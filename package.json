@@ -4,6 +4,11 @@
   "description": "Monopoly but with emojis",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build-pug && npm run build-sass",
+    "build-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty",
+    "watch-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty --watch",
+    "build-sass": "sass --scss --update src/public/sass:dist/public/css",
+    "watch-sass": "sass --scss --watch src/public/sass:dist/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,11 +24,13 @@
   "dependencies": {
     "express": "^4.16.2",
     "lodash": "^4.17.4",
+    "pug": "^2.0.0-rc.4",
     "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "@types/express": "^4.0.39",
     "@types/lodash": "^4.14.90",
-    "@types/socket.io": "^1.4.31"
+    "@types/socket.io": "^1.4.31",
+    "node-sass": "^4.7.2"
   }
 }

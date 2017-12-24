@@ -1,0 +1,39 @@
+#player-list {
+    padding-right: 10px;
+
+    .current-turn {
+        background-color: lighten($color: $nearly-black, $amount: 20);
+    }
+
+    .player {
+        display: flex;
+        margin: 5px 0px;
+
+        border: {
+            width: 1px;
+            style: solid;
+            color: black;
+            radius: 10px;
+        }
+
+        .player-icon {
+            font-size: 2.6em;
+        }
+    }
+    
+    #game-log {
+        background-color: $nearly-white;
+        color: $nearly-black;
+        max-height: 30%;
+        overflow: auto;
+        padding: 10px;
+        margin: 30px;
+
+        ul li {
+            list-style-type: none;
+        }
+    }
+    #game-log:before {
+        content: "GAME LOG:";
+    }
+}

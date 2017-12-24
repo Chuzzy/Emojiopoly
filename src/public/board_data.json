@@ -1,0 +1,248 @@
+{
+    "top": [
+        {
+            "name": "property-pizza",
+            "symbol": "1F355",
+            "color": "red",
+            "subtext": "220"
+        },
+        {
+            "name": "question-2",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
+            "subtext": "WTF"
+        },
+        {
+            "name": "property-hotdog",
+            "symbol": "1F32D",
+            "color": "red",
+            "subtext": "220"
+        },
+        {
+            "name": "property-hamburger",
+            "symbol": "1F354",
+            "subtext": "240",
+            "color": "red"
+        },
+        {
+            "name": "property-airplane",
+            "symbol": [
+                "2708",
+                "FE0F"
+            ],
+            "subtext": "200"
+        },
+        {
+            "name": "property-basketball",
+            "symbol": "1F3C0",
+            "subtext": "260",
+            "color": "yellow"
+        },
+        {
+            "name": "property-baseball",
+            "symbol": [
+                "26BE",
+                "FE0F"
+            ],
+            "subtext": "260",
+            "color": "yellow"
+        },
+        {
+            "name": "property-water",
+            "symbol": "1F30A",
+            "subtext": "150"
+        },
+        {
+            "name": "property-football",
+            "symbol": [
+                "26BD",
+                "FE0F"
+            ],
+            "subtext": "280",
+            "color": "yellow"
+        }
+    ],
+    "left": [
+        {
+            "name": "property-synagogue",
+            "symbol": "1F54D",
+            "subtext": "200",
+            "color": "orange"
+        },
+        {
+            "name": "property-church",
+            "symbol": [
+                "26EA",
+                "FE0F"
+            ],
+            "subtext": "180",
+            "color": "orange"
+        },
+        {
+            "name": "exclamation-2",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
+            "subtext": "OMG"
+        },
+        {
+            "name": "property-mosque",
+            "symbol": "1F54C",
+            "subtext": "180",
+            "color": "orange"
+        },
+        {
+            "name": "property-taxi",
+            "symbol": "1F695",
+            "subtext": "200"
+        },
+        {
+            "name": "property-sun",
+            "symbol": [
+                "2600",
+                "FE0F"
+            ],
+            "subtext": "160",
+            "color": "pink"
+        },
+        {
+            "name": "property-moon",
+            "symbol": "1F319",
+            "subtext": "140",
+            "color": "pink"
+        },
+        {
+            "name": "property-lightbulb",
+            "symbol": "1F4A1",
+            "subtext": "150"
+        },
+        {
+            "name": "property-star",
+            "symbol": [
+                "2B50",
+                "FE0F"
+            ],
+            "subtext": "140",
+            "color": "pink"
+        }
+    ],
+    "right": [
+        {
+            "name": "property-kaaba",
+            "symbol": "1F54B",
+            "subtext": "300",
+            "color": "green"
+        },
+        {
+            "name": "property-tokyotower",
+            "symbol": "1F5FC",
+            "subtext": "300",
+            "color": "green"
+        },
+        {
+            "name": "exclamation-3",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
+            "subtext": "OMG"
+        },
+        {
+            "name": "property-liberty",
+            "symbol": "1F5FD",
+            "subtext": "320",
+            "color": "green"
+        },
+        {
+            "name": "property-locomotive",
+            "symbol": "1F682",
+            "subtext": "200"
+        },
+        {
+            "name": "question-3",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
+            "subtext": "WTF"
+        },
+        {
+            "name": "property-castle",
+            "symbol": "1F3EF",
+            "subtext": "350",
+            "color": "blue"
+        },
+        {
+            "name": "supertax",
+            "symbol": "1F44E",
+            "subtext": "-100"
+        },
+        {
+            "name": "property-lovehotel",
+            "symbol": "1F3E9",
+            "subtext": "400",
+            "color": "blue"
+        }
+    ],
+    "bottom": [
+        {
+            "name": "property-speaknoevil",
+            "symbol": "1F64A",
+            "subtext": "120",
+            "color": "lightblue"
+        },
+        {
+            "name": "property-hearnoevil",
+            "symbol": "1F649",
+            "subtext": "100",
+            "color": "lightblue"
+        },
+        {
+            "name": "question-1",
+            "symbol": [
+                "2753",
+                "FE0F"
+            ],
+            "subtext": "WTF"
+        },
+        {
+            "name": "property-seenoevil",
+            "symbol": "1F648",
+            "subtext": "100",
+            "color": "lightblue"
+        },
+        {
+            "name": "property-bus",
+            "symbol": "1F68C",
+            "subtext": "200"
+        },
+        {
+            "name": "tax",
+            "symbol": "1F595",
+            "subtext": "-200"
+        },
+        {
+            "name": "property-aubergine",
+            "symbol": "1F346",
+            "subtext": "60",
+            "color": "brown"
+        },
+        {
+            "name": "exclamation-1",
+            "symbol": [
+                "2757",
+                "FE0F"
+            ],
+            "subtext": "OMG"
+        },
+        {
+            "name": "property-sweat",
+            "symbol": "1F4A6",
+            "subtext": "60",
+            "color": "brown"
+        }
+    ]
+}

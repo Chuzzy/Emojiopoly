@@ -1,0 +1,111 @@
+mixin row(data)
+    each val in data
+        div(id=val.name, class=val.color)
+            .property-symbol
+                !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
+            .sub
+                =val.subtext
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title Emojiopoly
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i", rel="stylesheet", type="text/css")
+        link(rel="stylesheet", type="text/css", href="css/style.css")
+    body
+        #main-container
+            .side-panel#player-list
+                .player.current-turn
+                    .player-icon &#x1F602;
+                    .player-info
+                        .player-name Chuzzy
+                        .player-cash &#x1F4B7;1500 (Assets: 1500)
+                        .player-location HOTDOG
+                .player
+                    .player-icon &#x1F62E;
+                    .player-info
+                        .player-name Choosty
+                        .player-cash &#x1F4B5;230 (Assets: 890)
+                        .player-location UNDER ARREST
+                .player
+                    .player-icon &#x1F914;
+                    .player-info
+                        .player-name Crusty
+                        .player-cash &#x1F4B5;1 (Assets: 1)
+                        .player-location POLICE CAR
+                #game-log
+                    ul
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+                        li Choosty is under arrest!
+            #board
+                #top
+                    .corner#parking &#x1F698;
+                    +row(top)
+                    .corner#gotojail &#x1F46E;
+                #center
+                    #left
+                        +row(left)
+                    #center-space
+                    #right
+                        +row(right)
+                #bottom
+                    .corner#jail &#x1F693;
+                    +row(bottom)
+                    .corner#go &#x1F4B0;
+                .player-token#player-Chuzzy &#x1F602;
+                .player-token#player-Choosty &#x1F62E;
+                .player-token#player-Crusty &#x1F914;
+
+            .side-panel#game-info
+                #button-wrapper
+                    button#manage-button &#x1F528; Manage
+                    button#trade-button &#x1F504; Trade
+                    button#bankrupt-button &#x1F4B8; Bankrupt
+                
+                #selected-property
+                    #prop-name.red HOTDOG
+                    table
+                        thead
+                            tr
+                                th Cost
+                                th 220
+                        tbody
+                            tr
+                                td
+                                    b Fee
+                                td
+                                    b 18
+                            tr
+                                td &#x1F44D;
+                                td 90
+                            tr
+                                td &#x1F44D;&#x1F44D;
+                                td 250
+                            tr
+                                td &#x1F44D;&#x1F44D;&#x1F44D;
+                                td 700
+                            tr 
+                                td &#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;
+                                td 875
+                            tr 
+                                td &#x1F44C;
+                                td 1050
+                            tr 
+                                td Cost per &#x1F44D;/&#x1F44C;
+                                td 130
+                            tr 
+                                td Disabled value
+                                td 110
+                            tr
+                                td Cost to re-enable
+                                td 121
