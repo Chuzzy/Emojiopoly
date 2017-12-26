@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Emojiopoly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
@@ -287,9 +286,9 @@
       </div>
       <div class="side-panel" id="game-info">
         <div id="button-wrapper">
-          <button id="manage-button">&#x1F528; Manage</button>
-          <button id="trade-button">&#x1F504; Trade</button>
-          <button id="bankrupt-button">&#x1F4B8; Bankrupt</button>
+          <button id="manage-button" onclick="manageProperties()">&#x1F528; Manage</button>
+          <button id="trade-button" onclick="showTradeWindow()">&#x1F504; Trade</button>
+          <button id="bankrupt-button" onclick="confirmBankruptcy()">&#x1F4B8; Bankrupt</button>
         </div>
         <div id="selected-property">
           <div class="red" id="prop-name">HOTDOG</div>
@@ -342,5 +341,6 @@
         </div>
       </div>
     </div>
+    <script src="bundle.js"></script>
   </body>
 </html>

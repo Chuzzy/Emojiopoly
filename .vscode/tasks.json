@@ -27,6 +27,11 @@
             "type": "npm",
             "script": "watch-sass",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "watch-webpack",
+            "problemMatcher": []
         }
     ]
 }

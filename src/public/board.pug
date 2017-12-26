@@ -67,9 +67,9 @@ html(lang="en")
 
             .side-panel#game-info
                 #button-wrapper
-                    button#manage-button &#x1F528; Manage
-                    button#trade-button &#x1F504; Trade
-                    button#bankrupt-button &#x1F4B8; Bankrupt
+                    button#manage-button(onclick="manageProperties()") &#x1F528; Manage
+                    button#trade-button(onclick="showTradeWindow()") &#x1F504; Trade
+                    button#bankrupt-button(onclick="confirmBankruptcy()") &#x1F4B8; Bankrupt
                 
                 #selected-property
                     #prop-name.red HOTDOG
@@ -108,3 +108,4 @@ html(lang="en")
                             tr
                                 td Cost to re-enable
                                 td 121
+        script(src="bundle.js")

@@ -9,6 +9,8 @@
     "watch-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty --watch",
     "build-sass": "sass --scss --update src/public/sass:dist/public/css",
     "watch-sass": "sass --scss --watch src/public/sass:dist/public/css",
+    "build-webpack": "webpack",
+    "watch-webpack": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,14 +26,15 @@
   "dependencies": {
     "express": "^4.16.2",
     "lodash": "^4.17.4",
-    "pug": "^2.0.0-rc.4",
     "socket.io": "^2.0.4",
-    "sweetalert": "^2.1.0"
+    "sweetalert2": "^7.1.2"
   },
   "devDependencies": {
     "@types/express": "^4.0.39",
     "@types/lodash": "^4.14.90",
     "@types/socket.io": "^1.4.31",
-    "node-sass": "^4.7.2"
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }
