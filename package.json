@@ -10,7 +10,7 @@
     "build-sass": "sass --scss --update src/public/sass:dist/public/css",
     "watch-sass": "sass --scss --watch src/public/sass:dist/public/css",
     "build-webpack": "webpack",
-    "watch-webpack": "webpack --watch",
+    "watch-webpack": "webpack --watch", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

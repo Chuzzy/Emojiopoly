@@ -1,6 +1,6 @@
 mixin row(data)
     each val in data
-        div(id=val.name, class=val.color)
+        div(id=val.name, class=val.color, data-fee0=val.fee0, data-fee1=val.fee1, data-fee2=val.fee2, data-fee3=val.fee3, data-fee4=val.fee4, data-fee5=val.fee5)
             .property-symbol
                 !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
             .sub
@@ -77,35 +77,34 @@ html(lang="en")
                         thead
                             tr
                                 th Cost
-                                th 220
+                                th#cost-purchase 220
                         tbody
                             tr
-                                td
-                                    b Fee
-                                td
+                                td#fee-0-text Fee
+                                td#fee-0
                                     b 18
                             tr
-                                td &#x1F44D;
-                                td 90
+                                td#fee-1-text &#x1F44D;
+                                td#fee-1 90
                             tr
-                                td &#x1F44D;&#x1F44D;
-                                td 250
+                                td#fee-2-text &#x1F44D;&#x1F44D;
+                                td#fee-2 250
                             tr
-                                td &#x1F44D;&#x1F44D;&#x1F44D;
-                                td 700
+                                td#fee-3-text &#x1F44D;&#x1F44D;&#x1F44D;
+                                td#fee-3 700
                             tr 
-                                td &#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;
-                                td 875
+                                td#fee-4-text &#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;
+                                td#fee-4 875
                             tr 
-                                td &#x1F44C;
-                                td 1050
+                                td#fee-5-text &#x1F44C;
+                                td#fee-5 1050
                             tr 
-                                td Cost per &#x1F44D;/&#x1F44C;
-                                td 130
+                                td#cost-improve-text Cost per &#x1F44D;/&#x1F44C;
+                                td#cost-improve 130
                             tr 
                                 td Disabled value
-                                td 110
+                                td#disabled-value 110
                             tr
                                 td Cost to re-enable
-                                td 121
+                                td#cost-reenable 121
         script(src="bundle.js")

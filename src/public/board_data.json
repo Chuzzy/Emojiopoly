@@ -4,7 +4,14 @@
             "name": "property-pizza",
             "symbol": "1F355",
             "color": "red",
-            "subtext": "220"
+            "subtext": "220",
+            "fee0": 18,
+            "fee1": 90,
+            "fee2": 250,
+            "fee3": 700,
+            "fee4": 875,
+            "fee5": 1050,
+            "improvement": 130
         },
         {
             "name": "question-2",
@@ -18,13 +25,27 @@
             "name": "property-hotdog",
             "symbol": "1F32D",
             "color": "red",
-            "subtext": "220"
+            "subtext": "220",
+            "fee0": 18,
+            "fee1": 90,
+            "fee2": 250,
+            "fee3": 700,
+            "fee4": 875,
+            "fee5": 1050,
+            "improvement": 130
         },
         {
             "name": "property-hamburger",
             "symbol": "1F354",
             "subtext": "240",
-            "color": "red"
+            "color": "red",
+            "fee0": 20,
+            "fee1": 100,
+            "fee2": 300,
+            "fee3": 750,
+            "fee4": 925,
+            "fee5": 1110,
+            "improvement": 130
         },
         {
             "name": "property-airplane",
@@ -32,13 +53,24 @@
                 "2708",
                 "FE0F"
             ],
-            "subtext": "200"
+            "subtext": "200",
+            "fee0": 25,
+            "fee1": 50,
+            "fee2": 100,
+            "fee3": 200
         },
         {
             "name": "property-basketball",
             "symbol": "1F3C0",
             "subtext": "260",
-            "color": "yellow"
+            "color": "yellow",
+            "fee0": 22,
+            "fee1": 110,
+            "fee2": 330,
+            "fee3": 800,
+            "fee4": 975,
+            "fee5": 1150,
+            "improvement": 130
         },
         {
             "name": "property-baseball",
@@ -47,7 +79,14 @@
                 "FE0F"
             ],
             "subtext": "260",
-            "color": "yellow"
+            "color": "yellow",
+            "fee0": 22,
+            "fee1": 110,
+            "fee2": 330,
+            "fee3": 800,
+            "fee4": 975,
+            "fee5": 1150,
+            "improvement": 130
         },
         {
             "name": "property-water",
@@ -61,7 +100,14 @@
                 "FE0F"
             ],
             "subtext": "280",
-            "color": "yellow"
+            "color": "yellow",
+            "fee0": 24,
+            "fee1": 120,
+            "fee2": 360,
+            "fee3": 850,
+            "fee4": 1025,
+            "fee5": 1200,
+            "improvement": 130
         }
     ],
     "left": [
@@ -69,7 +115,14 @@
             "name": "property-synagogue",
             "symbol": "1F54D",
             "subtext": "200",
-            "color": "orange"
+            "color": "orange",
+            "fee0": 16,
+            "fee1": 80,
+            "fee2": 220,
+            "fee3": 600,
+            "fee4": 800,
+            "fee5": 1000,
+            "improvement": 100
         },
         {
             "name": "property-church",
@@ -78,7 +131,14 @@
                 "FE0F"
             ],
             "subtext": "180",
-            "color": "orange"
+            "color": "orange",
+            "fee0": 14,
+            "fee1": 70,
+            "fee2": 200,
+            "fee3": 550,
+            "fee4": 750,
+            "fee5": 950,
+            "improvement": 100
         },
         {
             "name": "exclamation-2",
@@ -92,12 +152,23 @@
             "name": "property-mosque",
             "symbol": "1F54C",
             "subtext": "180",
-            "color": "orange"
+            "color": "orange",
+            "fee0": 14,
+            "fee1": 70,
+            "fee2": 200,
+            "fee3": 550,
+            "fee4": 750,
+            "fee5": 950,
+            "improvement": 100
         },
         {
             "name": "property-taxi",
             "symbol": "1F695",
-            "subtext": "200"
+            "subtext": "200",
+            "fee0": 25,
+            "fee1": 50,
+            "fee2": 100,
+            "fee3": 200
         },
         {
             "name": "property-sun",
@@ -112,12 +183,26 @@
             "name": "property-moon",
             "symbol": "1F319",
             "subtext": "140",
-            "color": "pink"
+            "color": "pink",
+            "fee0": 12,
+            "fee1": 60,
+            "fee2": 180,
+            "fee3": 500,
+            "fee4": 700,
+            "fee5": 900,
+            "improvement": 100
         },
         {
             "name": "property-lightbulb",
             "symbol": "1F4A1",
-            "subtext": "150"
+            "subtext": "150",
+            "fee0": 10,
+            "fee1": 50,
+            "fee2": 150,
+            "fee3": 450,
+            "fee4": 625,
+            "fee5": 750,
+            "improvement": 100
         },
         {
             "name": "property-star",
@@ -126,7 +211,14 @@
                 "FE0F"
             ],
             "subtext": "140",
-            "color": "pink"
+            "color": "pink",
+            "fee0": 10,
+            "fee1": 50,
+            "fee2": 150,
+            "fee3": 450,
+            "fee4": 625,
+            "fee5": 750,
+            "improvement": 100
         }
     ],
     "right": [
@@ -134,13 +226,27 @@
             "name": "property-kaaba",
             "symbol": "1F54B",
             "subtext": "300",
-            "color": "green"
+            "color": "green",
+            "fee0": 26,
+            "fee1": 130,
+            "fee2": 390,
+            "fee3": 900,
+            "fee4": 1100,
+            "fee5": 1275,
+            "improvement": 150
         },
         {
             "name": "property-tokyotower",
             "symbol": "1F5FC",
             "subtext": "300",
-            "color": "green"
+            "color": "green",
+            "fee0": 26,
+            "fee1": 130,
+            "fee2": 390,
+            "fee3": 900,
+            "fee4": 1100,
+            "fee5": 1275,
+            "improvement": 150
         },
         {
             "name": "exclamation-3",
@@ -154,12 +260,23 @@
             "name": "property-liberty",
             "symbol": "1F5FD",
             "subtext": "320",
-            "color": "green"
+            "color": "green",
+            "fee0": 28,
+            "fee1": 150,
+            "fee2": 450,
+            "fee3": 1000,
+            "fee4": 1200,
+            "fee5": 1400,
+            "improvement": 150
         },
         {
             "name": "property-locomotive",
             "symbol": "1F682",
-            "subtext": "200"
+            "subtext": "200",
+            "fee0": 25,
+            "fee1": 50,
+            "fee2": 100,
+            "fee3": 200
         },
         {
             "name": "question-3",
@@ -173,7 +290,14 @@
             "name": "property-castle",
             "symbol": "1F3EF",
             "subtext": "350",
-            "color": "blue"
+            "color": "blue",
+            "fee0": 35,
+            "fee1": 175,
+            "fee2": 500,
+            "fee3": 1100,
+            "fee4": 1300,
+            "fee5": 1500,
+            "improvement": 200
         },
         {
             "name": "supertax",
@@ -184,7 +308,14 @@
             "name": "property-lovehotel",
             "symbol": "1F3E9",
             "subtext": "400",
-            "color": "blue"
+            "color": "blue",
+            "fee0": 50,
+            "fee1": 200,
+            "fee2": 600,
+            "fee3": 1400,
+            "fee4": 1700,
+            "fee5": 2000,
+            "improvement": 200
         }
     ],
     "bottom": [
@@ -192,13 +323,25 @@
             "name": "property-speaknoevil",
             "symbol": "1F64A",
             "subtext": "120",
-            "color": "lightblue"
+            "color": "lightblue",
+            "fee0": 8,
+            "fee1": 40,
+            "fee2": 100,
+            "fee3": 300,
+            "fee4": 450,
+            "fee5": 600
         },
         {
             "name": "property-hearnoevil",
             "symbol": "1F649",
             "subtext": "100",
-            "color": "lightblue"
+            "color": "lightblue",
+            "fee0": 6,
+            "fee1": 30,
+            "fee2": 90,
+            "fee3": 270,
+            "fee4": 400,
+            "fee5": 550
         },
         {
             "name": "question-1",
@@ -212,12 +355,22 @@
             "name": "property-seenoevil",
             "symbol": "1F648",
             "subtext": "100",
-            "color": "lightblue"
+            "color": "lightblue",
+            "fee0": 6,
+            "fee1": 30,
+            "fee2": 90,
+            "fee3": 270,
+            "fee4": 400,
+            "fee5": 550
         },
         {
             "name": "property-bus",
             "symbol": "1F68C",
-            "subtext": "200"
+            "subtext": "200",
+            "fee0": 25,
+            "fee1": 50,
+            "fee2": 100,
+            "fee3": 200
         },
         {
             "name": "tax",
@@ -228,7 +381,13 @@
             "name": "property-aubergine",
             "symbol": "1F346",
             "subtext": "60",
-            "color": "brown"
+            "color": "brown",
+            "fee0": 4,
+            "fee1": 20,
+            "fee2": 60,
+            "fee3": 180,
+            "fee4": 320,
+            "fee5": 450
         },
         {
             "name": "exclamation-1",
@@ -242,7 +401,13 @@
             "name": "property-sweat",
             "symbol": "1F4A6",
             "subtext": "60",
-            "color": "brown"
+            "color": "brown",
+            "fee0": 2,
+            "fee1": 10,
+            "fee2": 30,
+            "fee3": 90,
+            "fee4": 160,
+            "fee5": 250
         }
     ]
 }
