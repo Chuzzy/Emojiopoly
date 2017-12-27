@@ -25,6 +25,9 @@ div {
    */
   width: 1%; }
 
+.invisible {
+  opacity: 0; }
+
 #player-list {
   padding-right: 10px; }
   #player-list .current-turn {
