@@ -2,7 +2,7 @@
     "rules": {
         "adjacent-overload-signatures": true,
         "class-name": true,
-        "linebreak-style": true,
+        "linebreak-style": [true, "CRLF"],
         "no-angle-bracket-type-assertion": true,
         "no-require-imports": true,
         "semicolon": true,
