@@ -1,4 +1,5 @@
 import swal from "sweetalert2";
+import * as $ from "jquery";
 
 /**
  * An object containing functions
@@ -27,37 +28,99 @@ let publicFunctions = {
             }
         });
     },
+    /**
+     * Shows information about a property.
+     * @param name The name of the property.
+     * @param color The property's color.
+     * @param cost The cost to purchase.
+     * @param improvement The cost to develop on this property.
+     * @param fees The fees in increasing order.
+     */
     showPropertyInfo: (name: string, color: string, cost: number, improvement: number, ...fees: number[]) => {
-        let selectedPropertyElement = document.getElementById("selected-property");
-        while (selectedPropertyElement.hasChildNodes()) {
-            selectedPropertyElement.removeChild(selectedPropertyElement.lastChild);
-        }
-        
-        let propertyTitleElement = document.createElement("div");
-        propertyTitleElement.id = "prop-name";
-        propertyTitleElement.textContent = name;
+        $("#selected-property").removeClass("invisible");
+
+        let propertyTitleElement = $("#prop-name");
+        propertyTitleElement.text(name);
 
         let improvementText = ["Fee", "👍", "👍👍", "👍👍👍", "👍👍👍👍", "👌"];
-        let transportText = ["Fee", "With 2 transports", "With 3 transports", "With 4 transports"];
-        let priceTableTextElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => document.getElementById(value + "-text"));
-        let priceTableElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => document.getElementById(value));
+        let priceTableTextElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value + "-text"));
+        let priceTableElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value));
 
-        if (color) {
-            propertyTitleElement.className = color;
-            priceTableElements.forEach((element, index) => {
-                priceTableTextElements[index].innerHTML = improvementText[index];
-                element.innerHTML = fees[index].toString();
-            });
-            document.getElementById("cost-improve-text").innerHTML = "Cost per 👍/👌";
-            document.getElementById("cost-improve").innerHTML = improvement.toString();
-        } else {
-            propertyTitleElement.className = undefined;
-            
+        propertyTitleElement.removeClass();
+        propertyTitleElement.addClass(color);
+
+        for (let i = 0; i < priceTableElements.length; i++) {
+            priceTableTextElements[i].text(improvementText[i]);
+            priceTableElements[i].text(fees[i].toString());
         }
-        
-        document.getElementById("disabled-value").innerText = Math.floor(cost * 0.5).toString();
-        document.getElementById("cost-reenable").innerText = Math.floor(cost * 0.55).toString();
-    }
+
+        $("#cost-improve-text").text("Cost per 👍/👌");
+        $("#cost-improve").text(improvement.toString());
+
+        $("#cost-purchase").text(cost);
+        $("#disabled-value").text(Math.floor(cost * 0.5));
+        $("#cost-reenable").text(Math.floor(cost * 0.55));
+    },
+    /**
+     * Shows information about a transport property.
+     * @param name The name of the property.
+     */
+    showTransportInfo: (name: string) => {
+        $("#selected-property").removeClass("invisible");
+
+        let propertyTitleElement = $("#prop-name");
+        propertyTitleElement.removeClass();
+        propertyTitleElement.text(name);
+
+        let transportText = ["Fee", "With 2 transports", "With 3 transports", "With 4 transports", "", ""];
+        let priceTableTextElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value + "-text"));
+        let priceTableElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value));
+        let fees = ["25", "50", "100", "200", "", ""];
+        let cost = 200;
+
+        priceTableElements.forEach((element, index) => {
+            priceTableTextElements[index].text(transportText[index]);
+            element.text(fees[index]);
+        });
+
+        $("#cost-improve-text").text("");
+        $("#cost-improve").text("");
+
+        $("#cost-purchase").text(cost);
+        $("#disabled-value").text(Math.floor(cost * 0.5));
+        $("#cost-reenable").text(Math.floor(cost * 0.55));
+    },
+    /**
+     * Shows information about a utility property.
+     * @param name The name of the property.
+     */
+    showUtilityInfo: (name: string) => {
+        $("#selected-property").removeClass("invisible");
+
+        let propertyTitleElement = $("#prop-name");
+        propertyTitleElement.removeClass();
+        propertyTitleElement.text(name);
+
+        let priceTableTextElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value + "-text"));
+        let priceTableElements = ["fee-0", "fee-1", "fee-2", "fee-3", "fee-4", "fee-5"].map((value) => $("#" + value));
+        priceTableTextElements.forEach(value => value.text(""));
+        priceTableElements.forEach(value => value.text(""));
+
+        priceTableTextElements[0].text("If one utility is owned");
+        priceTableTextElements[1].text("If both utilities are owned");
+
+        priceTableElements[0].text("4x dice roll");
+        priceTableElements[1].text("10x dice roll");
+
+        $("#cost-improve-text").text("");
+        $("#cost-improve").text("");
+
+        let cost = 150;
+        $("#cost-purchase").text(cost);
+        $("#disabled-value").text(Math.floor(cost * 0.5));
+        $("#cost-reenable").text(Math.floor(cost * 0.55));
+    },
+    hidePropertyInfo: () => $("#selected-property").addClass("invisible")
 };
 
 Object.assign(window, publicFunctions);

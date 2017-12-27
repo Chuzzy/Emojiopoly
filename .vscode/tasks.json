@@ -30,6 +30,11 @@
         },
         {
             "type": "npm",
+            "script": "build-webpack",
+            "problemMatcher": []
+        },
+        {
+            "type": "npm",
             "script": "watch-webpack",
             "problemMatcher": []
         }

@@ -1,10 +1,30 @@
 mixin row(data)
     each val in data
-        div(id=val.name, class=val.color, data-fee0=val.fee0, data-fee1=val.fee1, data-fee2=val.fee2, data-fee3=val.fee3, data-fee4=val.fee4, data-fee5=val.fee5)
-            .property-symbol
-                !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
-            .sub
-                =val.subtext
+        unless val.propertyType === undefined
+            if val.propertyType === "utility"
+                div(id=val.name, class=val.color, onclick=`showUtilityInfo("${val.name.slice(9)}")`)
+                    .property-symbol
+                        !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
+                    .sub
+                        =val.subtext
+            else if val.propertyType === "transport"
+                div(id=val.name, class=val.color, onclick=`showTransportInfo("${val.name.slice(9)}")`)
+                    .property-symbol
+                        !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
+                    .sub
+                        =val.subtext
+            else
+                div(id=val.name, class=val.color, onclick=`showPropertyInfo("${val.name.slice(9)}", "${val.color}", ${val.subtext}, ${val.improvement}, ${val.fee0}, ${val.fee1}, ${val.fee2}, ${val.fee3}, ${val.fee4}, ${val.fee5})`)
+                    .property-symbol
+                        !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
+                    .sub
+                        =val.subtext
+        else
+            div(id=val.name, class=val.color, onclick="hidePropertyInfo()")
+                .property-symbol
+                    !=(Array.isArray(val.symbol) ? val.symbol.reduce(((sum, elem) => sum + "&#x" + elem + ";"), "") : ("&#x" + val.symbol + ";"))
+                .sub
+                    =val.subtext
 
 doctype html
 html(lang="en")
@@ -48,19 +68,19 @@ html(lang="en")
                         li Choosty is under arrest!
             #board
                 #top
-                    .corner#parking &#x1F698;
+                    .corner#parking(onclick="hidePropertyInfo()") &#x1F698;
                     +row(top)
-                    .corner#gotojail &#x1F46E;
+                    .corner#gotojail(onclick="hidePropertyInfo()") &#x1F46E;
                 #center
                     #left
                         +row(left)
-                    #center-space
+                    #center-space(onclick="hidePropertyInfo()")
                     #right
                         +row(right)
                 #bottom
-                    .corner#jail &#x1F693;
+                    .corner#jail(onclick="hidePropertyInfo()") &#x1F693;
                     +row(bottom)
-                    .corner#go &#x1F4B0;
+                    .corner#go(onclick="hidePropertyInfo()") &#x1F4B0;
                 .player-token#player-Chuzzy &#x1F602;
                 .player-token#player-Choosty &#x1F62E;
                 .player-token#player-Crusty &#x1F914;
@@ -71,40 +91,40 @@ html(lang="en")
                     button#trade-button(onclick="showTradeWindow()") &#x1F504; Trade
                     button#bankrupt-button(onclick="confirmBankruptcy()") &#x1F4B8; Bankrupt
                 
-                #selected-property
-                    #prop-name.red HOTDOG
+                #selected-property.invisible
+                    #prop-name
                     table
                         thead
                             tr
                                 th Cost
-                                th#cost-purchase 220
+                                th#cost-purchase
                         tbody
                             tr
                                 td#fee-0-text Fee
                                 td#fee-0
-                                    b 18
+                                    b 
                             tr
                                 td#fee-1-text &#x1F44D;
-                                td#fee-1 90
+                                td#fee-1 
                             tr
                                 td#fee-2-text &#x1F44D;&#x1F44D;
-                                td#fee-2 250
+                                td#fee-2 
                             tr
                                 td#fee-3-text &#x1F44D;&#x1F44D;&#x1F44D;
-                                td#fee-3 700
+                                td#fee-3 
                             tr 
                                 td#fee-4-text &#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;
-                                td#fee-4 875
+                                td#fee-4 
                             tr 
                                 td#fee-5-text &#x1F44C;
-                                td#fee-5 1050
+                                td#fee-5 
                             tr 
                                 td#cost-improve-text Cost per &#x1F44D;/&#x1F44C;
-                                td#cost-improve 130
+                                td#cost-improve 
                             tr 
                                 td Disabled value
-                                td#disabled-value 110
+                                td#disabled-value 
                             tr
                                 td Cost to re-enable
-                                td#cost-reenable 121
+                                td#cost-reenable 
         script(src="bundle.js")

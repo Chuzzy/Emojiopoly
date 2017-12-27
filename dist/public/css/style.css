@@ -207,7 +207,8 @@ button {
   color: #1a1a1a;
   text-align: center; }
   #selected-property #prop-name {
-    padding: 10px 0px; }
+    padding: 10px 0px;
+    text-transform: uppercase; }
   #selected-property table {
     width: 100%; }
 

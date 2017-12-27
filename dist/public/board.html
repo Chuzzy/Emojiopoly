@@ -50,171 +50,171 @@
       </div>
       <div id="board">
         <div id="top">
-          <div class="corner" id="parking">&#x1F698;</div>
-          <div class="red" id="property-pizza" data-fee0="18" data-fee1="90" data-fee2="250" data-fee3="700" data-fee4="875" data-fee5="1050">
+          <div class="corner" id="parking" onclick="hidePropertyInfo()">&#x1F698;</div>
+          <div class="red" id="property-pizza" onclick="showPropertyInfo(&quot;pizza&quot;, &quot;red&quot;, 220, 130, 18, 90, 250, 700, 875, 1050)">
             <div class="property-symbol">&#x1F355;
             </div>
             <div class="sub">220
             </div>
           </div>
-          <div id="question-2">
+          <div id="question-2" onclick="hidePropertyInfo()">
             <div class="property-symbol">&#x2753;&#xFE0F;
             </div>
             <div class="sub">WTF
             </div>
           </div>
-          <div class="red" id="property-hotdog" data-fee0="18" data-fee1="90" data-fee2="250" data-fee3="700" data-fee4="875" data-fee5="1050">
+          <div class="red" id="property-hotdog" onclick="showPropertyInfo(&quot;hotdog&quot;, &quot;red&quot;, 220, 130, 18, 90, 250, 700, 875, 1050)">
             <div class="property-symbol">&#x1F32D;
             </div>
             <div class="sub">220
             </div>
           </div>
-          <div class="red" id="property-hamburger" data-fee0="20" data-fee1="100" data-fee2="300" data-fee3="750" data-fee4="925" data-fee5="1110">
+          <div class="red" id="property-hamburger" onclick="showPropertyInfo(&quot;hamburger&quot;, &quot;red&quot;, 240, 130, 20, 100, 300, 750, 925, 1110)">
             <div class="property-symbol">&#x1F354;
             </div>
             <div class="sub">240
             </div>
           </div>
-          <div id="property-airplane" data-fee0="25" data-fee1="50" data-fee2="100" data-fee3="200">
+          <div id="property-airplane" onclick="showTransportInfo(&quot;airplane&quot;)">
             <div class="property-symbol">&#x2708;&#xFE0F;
             </div>
             <div class="sub">200
             </div>
           </div>
-          <div class="yellow" id="property-basketball" data-fee0="22" data-fee1="110" data-fee2="330" data-fee3="800" data-fee4="975" data-fee5="1150">
+          <div class="yellow" id="property-basketball" onclick="showPropertyInfo(&quot;basketball&quot;, &quot;yellow&quot;, 260, 130, 22, 110, 330, 800, 975, 1150)">
             <div class="property-symbol">&#x1F3C0;
             </div>
             <div class="sub">260
             </div>
           </div>
-          <div class="yellow" id="property-baseball" data-fee0="22" data-fee1="110" data-fee2="330" data-fee3="800" data-fee4="975" data-fee5="1150">
+          <div class="yellow" id="property-baseball" onclick="showPropertyInfo(&quot;baseball&quot;, &quot;yellow&quot;, 260, 130, 22, 110, 330, 800, 975, 1150)">
             <div class="property-symbol">&#x26BE;&#xFE0F;
             </div>
             <div class="sub">260
             </div>
           </div>
-          <div id="property-water">
+          <div id="property-water" onclick="showUtilityInfo(&quot;water&quot;)">
             <div class="property-symbol">&#x1F30A;
             </div>
             <div class="sub">150
             </div>
           </div>
-          <div class="yellow" id="property-football" data-fee0="24" data-fee1="120" data-fee2="360" data-fee3="850" data-fee4="1025" data-fee5="1200">
+          <div class="yellow" id="property-football" onclick="showPropertyInfo(&quot;football&quot;, &quot;yellow&quot;, 280, 130, 24, 120, 360, 850, 1025, 1200)">
             <div class="property-symbol">&#x26BD;&#xFE0F;
             </div>
             <div class="sub">280
             </div>
           </div>
-          <div class="corner" id="gotojail">&#x1F46E;</div>
+          <div class="corner" id="gotojail" onclick="hidePropertyInfo()">&#x1F46E;</div>
         </div>
         <div id="center">
           <div id="left">
-            <div class="orange" id="property-synagogue" data-fee0="16" data-fee1="80" data-fee2="220" data-fee3="600" data-fee4="800" data-fee5="1000">
+            <div class="orange" id="property-synagogue" onclick="showPropertyInfo(&quot;synagogue&quot;, &quot;orange&quot;, 200, 100, 16, 80, 220, 600, 800, 1000)">
               <div class="property-symbol">&#x1F54D;
               </div>
               <div class="sub">200
               </div>
             </div>
-            <div class="orange" id="property-church" data-fee0="14" data-fee1="70" data-fee2="200" data-fee3="550" data-fee4="750" data-fee5="950">
+            <div class="orange" id="property-church" onclick="showPropertyInfo(&quot;church&quot;, &quot;orange&quot;, 180, 100, 14, 70, 200, 550, 750, 950)">
               <div class="property-symbol">&#x26EA;&#xFE0F;
               </div>
               <div class="sub">180
               </div>
             </div>
-            <div id="exclamation-2">
+            <div id="exclamation-2" onclick="hidePropertyInfo()">
               <div class="property-symbol">&#x2757;&#xFE0F;
               </div>
               <div class="sub">OMG
               </div>
             </div>
-            <div class="orange" id="property-mosque" data-fee0="14" data-fee1="70" data-fee2="200" data-fee3="550" data-fee4="750" data-fee5="950">
+            <div class="orange" id="property-mosque" onclick="showPropertyInfo(&quot;mosque&quot;, &quot;orange&quot;, 180, 100, 14, 70, 200, 550, 750, 950)">
               <div class="property-symbol">&#x1F54C;
               </div>
               <div class="sub">180
               </div>
             </div>
-            <div id="property-taxi" data-fee0="25" data-fee1="50" data-fee2="100" data-fee3="200">
+            <div id="property-taxi" onclick="showTransportInfo(&quot;taxi&quot;)">
               <div class="property-symbol">&#x1F695;
               </div>
               <div class="sub">200
               </div>
             </div>
-            <div class="pink" id="property-sun">
+            <div class="pink" id="property-sun" onclick="showPropertyInfo(&quot;sun&quot;, &quot;pink&quot;, 160, 100, 12, 60, 180, 500, 700, 900)">
               <div class="property-symbol">&#x2600;&#xFE0F;
               </div>
               <div class="sub">160
               </div>
             </div>
-            <div class="pink" id="property-moon" data-fee0="12" data-fee1="60" data-fee2="180" data-fee3="500" data-fee4="700" data-fee5="900">
+            <div class="pink" id="property-moon" onclick="showPropertyInfo(&quot;moon&quot;, &quot;pink&quot;, 140, 100, 10, 50, 150, 450, 625, 750)">
               <div class="property-symbol">&#x1F319;
               </div>
               <div class="sub">140
               </div>
             </div>
-            <div id="property-lightbulb" data-fee0="10" data-fee1="50" data-fee2="150" data-fee3="450" data-fee4="625" data-fee5="750">
+            <div id="property-lightbulb" onclick="showUtilityInfo(&quot;lightbulb&quot;)">
               <div class="property-symbol">&#x1F4A1;
               </div>
               <div class="sub">150
               </div>
             </div>
-            <div class="pink" id="property-star" data-fee0="10" data-fee1="50" data-fee2="150" data-fee3="450" data-fee4="625" data-fee5="750">
+            <div class="pink" id="property-star" onclick="showPropertyInfo(&quot;star&quot;, &quot;pink&quot;, 140, 100, 10, 50, 150, 450, 625, 750)">
               <div class="property-symbol">&#x2B50;&#xFE0F;
               </div>
               <div class="sub">140
               </div>
             </div>
           </div>
-          <div id="center-space"></div>
+          <div id="center-space" onclick="hidePropertyInfo()"></div>
           <div id="right">
-            <div class="green" id="property-kaaba" data-fee0="26" data-fee1="130" data-fee2="390" data-fee3="900" data-fee4="1100" data-fee5="1275">
+            <div class="green" id="property-kaaba" onclick="showPropertyInfo(&quot;kaaba&quot;, &quot;green&quot;, 300, 150, 26, 130, 390, 900, 1100, 1275)">
               <div class="property-symbol">&#x1F54B;
               </div>
               <div class="sub">300
               </div>
             </div>
-            <div class="green" id="property-tokyotower" data-fee0="26" data-fee1="130" data-fee2="390" data-fee3="900" data-fee4="1100" data-fee5="1275">
+            <div class="green" id="property-tokyotower" onclick="showPropertyInfo(&quot;tokyotower&quot;, &quot;green&quot;, 300, 150, 26, 130, 390, 900, 1100, 1275)">
               <div class="property-symbol">&#x1F5FC;
               </div>
               <div class="sub">300
               </div>
             </div>
-            <div id="exclamation-3">
+            <div id="exclamation-3" onclick="hidePropertyInfo()">
               <div class="property-symbol">&#x2757;&#xFE0F;
               </div>
               <div class="sub">OMG
               </div>
             </div>
-            <div class="green" id="property-liberty" data-fee0="28" data-fee1="150" data-fee2="450" data-fee3="1000" data-fee4="1200" data-fee5="1400">
+            <div class="green" id="property-liberty" onclick="showPropertyInfo(&quot;liberty&quot;, &quot;green&quot;, 320, 150, 28, 150, 450, 1000, 1200, 1400)">
               <div class="property-symbol">&#x1F5FD;
               </div>
               <div class="sub">320
               </div>
             </div>
-            <div id="property-locomotive" data-fee0="25" data-fee1="50" data-fee2="100" data-fee3="200">
+            <div id="property-locomotive" onclick="showTransportInfo(&quot;locomotive&quot;)">
               <div class="property-symbol">&#x1F682;
               </div>
               <div class="sub">200
               </div>
             </div>
-            <div id="question-3">
+            <div id="question-3" onclick="hidePropertyInfo()">
               <div class="property-symbol">&#x2753;&#xFE0F;
               </div>
               <div class="sub">WTF
               </div>
             </div>
-            <div class="blue" id="property-castle" data-fee0="35" data-fee1="175" data-fee2="500" data-fee3="1100" data-fee4="1300" data-fee5="1500">
+            <div class="blue" id="property-castle" onclick="showPropertyInfo(&quot;castle&quot;, &quot;blue&quot;, 350, 200, 35, 175, 500, 1100, 1300, 1500)">
               <div class="property-symbol">&#x1F3EF;
               </div>
               <div class="sub">350
               </div>
             </div>
-            <div id="supertax">
+            <div id="supertax" onclick="hidePropertyInfo()">
               <div class="property-symbol">&#x1F44E;
               </div>
               <div class="sub">-100
               </div>
             </div>
-            <div class="blue" id="property-lovehotel" data-fee0="50" data-fee1="200" data-fee2="600" data-fee3="1400" data-fee4="1700" data-fee5="2000">
+            <div class="blue" id="property-lovehotel" onclick="showPropertyInfo(&quot;lovehotel&quot;, &quot;blue&quot;, 400, 200, 50, 200, 600, 1400, 1700, 2000)">
               <div class="property-symbol">&#x1F3E9;
               </div>
               <div class="sub">400
@@ -223,62 +223,62 @@
           </div>
         </div>
         <div id="bottom">
-          <div class="corner" id="jail">&#x1F693;</div>
-          <div class="lightblue" id="property-speaknoevil" data-fee0="8" data-fee1="40" data-fee2="100" data-fee3="300" data-fee4="450" data-fee5="600">
+          <div class="corner" id="jail" onclick="hidePropertyInfo()">&#x1F693;</div>
+          <div class="lightblue" id="property-speaknoevil" onclick="showPropertyInfo(&quot;speaknoevil&quot;, &quot;lightblue&quot;, 120, 50, 8, 40, 100, 300, 450, 600)">
             <div class="property-symbol">&#x1F64A;
             </div>
             <div class="sub">120
             </div>
           </div>
-          <div class="lightblue" id="property-hearnoevil" data-fee0="6" data-fee1="30" data-fee2="90" data-fee3="270" data-fee4="400" data-fee5="550">
+          <div class="lightblue" id="property-hearnoevil" onclick="showPropertyInfo(&quot;hearnoevil&quot;, &quot;lightblue&quot;, 100, 50, 6, 30, 90, 270, 400, 550)">
             <div class="property-symbol">&#x1F649;
             </div>
             <div class="sub">100
             </div>
           </div>
-          <div id="question-1">
+          <div id="question-1" onclick="hidePropertyInfo()">
             <div class="property-symbol">&#x2753;&#xFE0F;
             </div>
             <div class="sub">WTF
             </div>
           </div>
-          <div class="lightblue" id="property-seenoevil" data-fee0="6" data-fee1="30" data-fee2="90" data-fee3="270" data-fee4="400" data-fee5="550">
+          <div class="lightblue" id="property-seenoevil" onclick="showPropertyInfo(&quot;seenoevil&quot;, &quot;lightblue&quot;, 100, 50, 6, 30, 90, 270, 400, 550)">
             <div class="property-symbol">&#x1F648;
             </div>
             <div class="sub">100
             </div>
           </div>
-          <div id="property-bus" data-fee0="25" data-fee1="50" data-fee2="100" data-fee3="200">
+          <div id="property-bus" onclick="showTransportInfo(&quot;bus&quot;)">
             <div class="property-symbol">&#x1F68C;
             </div>
             <div class="sub">200
             </div>
           </div>
-          <div id="tax">
+          <div id="tax" onclick="hidePropertyInfo()">
             <div class="property-symbol">&#x1F595;
             </div>
             <div class="sub">-200
             </div>
           </div>
-          <div class="brown" id="property-aubergine" data-fee0="4" data-fee1="20" data-fee2="60" data-fee3="180" data-fee4="320" data-fee5="450">
+          <div class="brown" id="property-aubergine" onclick="showPropertyInfo(&quot;aubergine&quot;, &quot;brown&quot;, 60, 50, 4, 20, 60, 180, 320, 450)">
             <div class="property-symbol">&#x1F346;
             </div>
             <div class="sub">60
             </div>
           </div>
-          <div id="exclamation-1">
+          <div id="exclamation-1" onclick="hidePropertyInfo()">
             <div class="property-symbol">&#x2757;&#xFE0F;
             </div>
             <div class="sub">OMG
             </div>
           </div>
-          <div class="brown" id="property-sweat" data-fee0="2" data-fee1="10" data-fee2="30" data-fee3="90" data-fee4="160" data-fee5="250">
+          <div class="brown" id="property-sweat" onclick="showPropertyInfo(&quot;sweat&quot;, &quot;brown&quot;, 60, 50, 2, 10, 30, 90, 160, 250)">
             <div class="property-symbol">&#x1F4A6;
             </div>
             <div class="sub">60
             </div>
           </div>
-          <div class="corner" id="go">&#x1F4B0;</div>
+          <div class="corner" id="go" onclick="hidePropertyInfo()">&#x1F4B0;</div>
         </div>
         <div class="player-token" id="player-Chuzzy">&#x1F602;</div>
         <div class="player-token" id="player-Choosty">&#x1F62E;</div>
@@ -290,51 +290,51 @@
           <button id="trade-button" onclick="showTradeWindow()">&#x1F504; Trade</button>
           <button id="bankrupt-button" onclick="confirmBankruptcy()">&#x1F4B8; Bankrupt</button>
         </div>
-        <div id="selected-property">
-          <div class="red" id="prop-name">HOTDOG</div>
+        <div class="invisible" id="selected-property">
+          <div id="prop-name"></div>
           <table>
             <thead>
               <tr>
                 <th>Cost</th>
-                <th id="cost-purchase">220</th>
+                <th id="cost-purchase"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td id="fee-0-text">Fee</td>
-                <td id="fee-0"><b>18</b></td>
+                <td id="fee-0"><b> </b></td>
               </tr>
               <tr>
                 <td id="fee-1-text">&#x1F44D;</td>
-                <td id="fee-1">90</td>
+                <td id="fee-1"> </td>
               </tr>
               <tr>
                 <td id="fee-2-text">&#x1F44D;&#x1F44D;</td>
-                <td id="fee-2">250</td>
+                <td id="fee-2"> </td>
               </tr>
               <tr>
                 <td id="fee-3-text">&#x1F44D;&#x1F44D;&#x1F44D;</td>
-                <td id="fee-3">700</td>
+                <td id="fee-3"> </td>
               </tr>
               <tr> 
                 <td id="fee-4-text">&#x1F44D;&#x1F44D;&#x1F44D;&#x1F44D;</td>
-                <td id="fee-4">875</td>
+                <td id="fee-4"> </td>
               </tr>
               <tr> 
                 <td id="fee-5-text">&#x1F44C;</td>
-                <td id="fee-5">1050</td>
+                <td id="fee-5"> </td>
               </tr>
               <tr> 
                 <td id="cost-improve-text">Cost per &#x1F44D;/&#x1F44C;</td>
-                <td id="cost-improve">130</td>
+                <td id="cost-improve"> </td>
               </tr>
               <tr> 
                 <td>Disabled value</td>
-                <td id="disabled-value">110</td>
+                <td id="disabled-value"> </td>
               </tr>
               <tr>
                 <td>Cost to re-enable</td>
-                <td id="cost-reenable">121</td>
+                <td id="cost-reenable"> </td>
               </tr>
             </tbody>
           </table>
