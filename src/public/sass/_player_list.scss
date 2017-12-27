@@ -1,5 +1,6 @@
 #player-list {
     padding-right: 10px;
+    font-size: 2vh;
 
     .current-turn {
         background-color: lighten($color: $nearly-black, $amount: 20);
@@ -8,6 +9,7 @@
     .player {
         display: flex;
         margin: 5px 0px;
+        padding: 0px 10px;
 
         border: {
             width: 1px;
@@ -16,8 +18,8 @@
             radius: 10px;
         }
 
-        .player-icon {
-            font-size: 2.6em;
+        .player-name {
+            font-size: 1.5em;
         }
     }
     
@@ -29,8 +31,11 @@
         padding: 10px;
         margin: 30px;
 
-        ul li {
-            list-style-type: none;
+        ul {
+            padding: 0px;
+            li {
+                list-style-type: none;
+            }
         }
     }
     #game-log:before {

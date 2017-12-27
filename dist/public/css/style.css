@@ -29,18 +29,20 @@ div {
   opacity: 0; }
 
 #player-list {
-  padding-right: 10px; }
+  padding-right: 10px;
+  font-size: 2vh; }
   #player-list .current-turn {
     background-color: #4d4d4d; }
   #player-list .player {
     display: flex;
     margin: 5px 0px;
+    padding: 0px 10px;
     border-width: 1px;
     border-style: solid;
     border-color: black;
     border-radius: 10px; }
-    #player-list .player .player-icon {
-      font-size: 2.6em; }
+    #player-list .player .player-name {
+      font-size: 1.5em; }
   #player-list #game-log {
     background-color: #e5e5e5;
     color: #1a1a1a;
@@ -48,20 +50,22 @@ div {
     overflow: auto;
     padding: 10px;
     margin: 30px; }
-    #player-list #game-log ul li {
-      list-style-type: none; }
+    #player-list #game-log ul {
+      padding: 0px; }
+      #player-list #game-log ul li {
+        list-style-type: none; }
   #player-list #game-log:before {
     content: "GAME LOG:"; }
 
 .player-token {
   position: absolute;
-  font-size: 23.3333333333px; }
+  font-size: 3.2666666667vh; }
 
 #board {
   display: flex;
   flex-direction: column;
-  width: 700px;
-  height: 700px;
+  width: 98vh;
+  height: 98vh;
   border: none;
   background-color: #e5e5e5;
   color: #1a1a1a; }
@@ -99,8 +103,8 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 17.5px;
-  font-size: 35px;
+  font-size: 2.45vh;
+  font-size: 4.9vh;
   flex-grow: 2;
   width: 200%; }
 
@@ -126,14 +130,14 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 17.5px;
+  font-size: 2.45vh;
   flex-grow: 1;
   flex-direction: column; }
   [id^="property"] .property-symbol, [id^="question"] .property-symbol, [id^="exclamation"] .property-symbol, #tax .property-symbol, #supertax .property-symbol {
     display: block;
     border: none; }
   [id^="property"] .sub, [id^="question"] .sub, [id^="exclamation"] .sub, #tax .sub, #supertax .sub {
-    font-size: 15.5555555556px;
+    font-size: 2.1777777778vh;
     display: block;
     clear: both;
     border: none; }
