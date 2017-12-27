@@ -59,13 +59,13 @@ div {
 
 .player-token {
   position: absolute;
-  font-size: 3.2666666667vh; }
+  font-size: 3.2vh; }
 
 #board {
   display: flex;
   flex-direction: column;
-  width: 98vh;
-  height: 98vh;
+  width: 96vh;
+  height: 96vh;
   border: none;
   background-color: #e5e5e5;
   color: #1a1a1a; }
@@ -103,8 +103,8 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 2.45vh;
-  font-size: 4.9vh;
+  font-size: 2.4vh;
+  font-size: 4.8vh;
   flex-grow: 2;
   width: 200%; }
 
@@ -130,14 +130,14 @@ div {
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 2.45vh;
+  font-size: 2.4vh;
   flex-grow: 1;
   flex-direction: column; }
   [id^="property"] .property-symbol, [id^="question"] .property-symbol, [id^="exclamation"] .property-symbol, #tax .property-symbol, #supertax .property-symbol {
     display: block;
     border: none; }
   [id^="property"] .sub, [id^="question"] .sub, [id^="exclamation"] .sub, #tax .sub, #supertax .sub {
-    font-size: 2.1777777778vh;
+    font-size: 2.1333333333vh;
     display: block;
     clear: both;
     border: none; }
