@@ -86,8 +86,20 @@ $center-space-width: 81.9%;
 .corner {
     @include square;
     font-size: $board-size / 20;
+    flex-direction: column;
     flex-grow: 2;
     width: 200%;
+
+    .corner-symbol {
+        display: block;
+    }
+    
+    .sub {
+        font-size: $board-size / 45;
+        display: block;
+        clear: both;
+        border: none;
+    }
 }
 
 #go {

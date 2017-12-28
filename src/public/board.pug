@@ -65,9 +65,12 @@ html(lang="en")
                         li Choosty is under arrest!
             #board
                 #top
-                    .corner#parking(onclick="hidePropertyInfo()") &#x1F698;
+                    .corner#parking(onclick="hidePropertyInfo()")
+                        .corner-symbol &#x1F698;
+                        .sub#parking-jackpot
                     +row(top)
-                    .corner#gotojail(onclick="hidePropertyInfo()") &#x1F46E;
+                    .corner#gotojail(onclick="hidePropertyInfo()")
+                        .corner-symbol &#x1F46E;
                 #center
                     #left
                         +row(left)
@@ -75,9 +78,12 @@ html(lang="en")
                     #right
                         +row(right)
                 #bottom
-                    .corner#jail(onclick="hidePropertyInfo()") &#x1F693;
+                    .corner#jail(onclick="hidePropertyInfo()")
+                        .corner-symbol &#x1F693;
                     +row(bottom)
-                    .corner#go(onclick="hidePropertyInfo()") &#x1F4B0;
+                    .corner#go(onclick="hidePropertyInfo()")
+                        .corner-symbol &#x1F4B0;
+                        .sub#go-salary 200
                 .player-token#player-Chuzzy &#x1F602;
                 .player-token#player-Choosty &#x1F62E;
                 .player-token#player-Crusty &#x1F914;
