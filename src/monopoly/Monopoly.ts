@@ -1,6 +1,7 @@
 namespace Monopoly {
     /**
      * A property that can be bought, traded or mortgaged.
+     * @class
      */
     export class Property {
         /**
@@ -34,6 +35,7 @@ namespace Monopoly {
     
     /**
      * A square on the board.
+     * @class
      */
     export class Square {
         public occupants: Player[];
@@ -72,7 +74,7 @@ namespace Monopoly {
         /**
          * Initialize a new player.
          * @param name The player's name.
-         * @param money The player's starting money.
+         * @param money The amount of money this player has.
          * @param startSquare The square the player starts on. This should be the "Go" square.
          */
         constructor(public name: string, public money: number, startSquare: Square) {
