@@ -122,6 +122,10 @@ namespace Monopoly {
         }
     }
 
+    /**
+     * A game of Monopoly.
+     * @class
+     */
     export class Monopoly {
         /**
          * The amount of money in the free parking jackpot.
