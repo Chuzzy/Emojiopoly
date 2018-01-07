@@ -1,4 +1,5 @@
-namespace Monopoly {
+import * as _ from "lodash";
+
     /**
      * A property that can be bought, traded or mortgaged.
      * @class
@@ -306,4 +307,3 @@ namespace Monopoly {
             });
         }
     }
-}
