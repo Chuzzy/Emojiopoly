@@ -126,7 +126,7 @@ namespace Monopoly {
          * or null if the money is owed to the bank.
          * @param amount The amount of money owed.
          */
-        constructor(public readonly game: Monopoly, public readonly debtor: Player, public readonly creditor: Player | null, public readonly amount: number) {
+        constructor(public readonly game: MonopolyGame, public readonly debtor: Player, public readonly creditor: Player | null, public readonly amount: number) {
         }
     }
 
@@ -134,7 +134,7 @@ namespace Monopoly {
      * A game of Monopoly.
      * @class
      */
-    export class Monopoly {
+    export class MonopolyGame {
         /**
          * The amount of money in the free parking jackpot.
          */
