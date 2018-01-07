@@ -84,6 +84,10 @@ namespace Monopoly {
 
     export class Monopoly {
         /**
+         * The amount of money in the free parking jackpot.
+         */
+        public jackpot: number;
+        /**
          * The index of the player whose turn it is.
          */
         public currentTurnIndex: number;
