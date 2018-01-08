@@ -13,7 +13,7 @@
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "/tests/.*\\.(ts|tsx|js)$"
-  }
+  },
   "scripts": {
     "build": "npm run build-pug && npm run build-sass",
     "build-pug": "pug --obj \"src/public/board_data.json\" src/public --out dist/public --pretty",
