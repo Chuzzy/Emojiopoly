@@ -156,6 +156,16 @@ export class MonopolyGame {
     }
 
     /**
+     * Attempts to pay all unpaid debts.
+     * @throws Error if an error occurs while paying a debt.
+     */
+    public payDebts() {
+        this.unpaidDebts.forEach(debt => {
+            debt.payDebt();
+        });
+    }
+
+    /**
      * Finish this person's turn.
      */
     public finishTurn() {
