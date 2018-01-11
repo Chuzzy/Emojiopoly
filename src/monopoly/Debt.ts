@@ -51,8 +51,7 @@ export class Debt {
      * Creates a new debt and adds it to the game's unpaid debts.
      * @param game The game this debt belongs to.
      * @param debtor The player who owes money.
-     * @param creditor The player who is receiving the money
-     * or null if the money is owed to the bank.
+     * @param creditor The player who is receiving the money or null if the money is owed to the bank.
      * @param initialAmount The initial amount of money owed.
      */
     constructor(public readonly game: MonopolyGame, public readonly debtor: Player, public readonly creditor: Player | null, public readonly initialAmount: number) {
