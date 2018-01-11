@@ -3,7 +3,7 @@
         {
             "text": "Feeling hungry",
             "action": "advance",
-            "value": "hamburger"
+            "value": 24
         },
         {
             "text": "Replace everyone's phones",
@@ -13,12 +13,12 @@
         {
             "text": "Payday",
             "action": "advance",
-            "value": "go"
+            "value": 0
         },
         {
             "text": "Hitch a Taxi ride",
             "action": "advance",
-            "value": "taxi"
+            "value": 15
         },
         {
             "text": "Take a ride on the nearest transport",
@@ -55,7 +55,7 @@
         {
             "text": "Feeling moody",
             "action": "advance",
-            "value": "lovehotel"
+            "value": 39
         },
         {
             "text": "Make use of the nearest utility",
@@ -70,7 +70,7 @@
         {
             "text": "Star-struck",
             "action": "advance",
-            "value": "star"
+            "value": 11
         },
         {
             "text": "Advance to nearest transport and pay 2x",
@@ -79,7 +79,7 @@
         {
             "text": "Win the jackpot",
             "action": "advance",
-            "value": "freeparking"
+            "value": 20
         }
     ],
     "omg": [
@@ -123,7 +123,7 @@
         {
             "text": "Payday",
             "action": "advance",
-            "value": "go"
+            "value": 0
         },
         {
             "text": "Dabbing in public",
