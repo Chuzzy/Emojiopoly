@@ -167,6 +167,7 @@ export class MonopolyGame {
 
     /**
      * Finish this person's turn.
+     * If there are unpaid debts, an attempt is made to pay them off using `payDebts`.
      */
     public finishTurn() {
         if (_.isEmpty(this.unpaidDebts)) {
@@ -174,7 +175,9 @@ export class MonopolyGame {
             if (this.consecutiveDoubles === 0)
                 this.currentTurnIndex = ++this.currentTurnIndex % this.players.length;
         } else {
-            throw new Error("There are still debts to be paid: " + this.unpaidDebts);
+            this.payDebts();
+            if (!_.isEmpty(this.unpaidDebts))
+                throw new Error("There are still debts to be paid: " + this.unpaidDebts);
         }
     }
 
