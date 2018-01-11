@@ -111,6 +111,18 @@ export class MonopolyGame {
         this.isTurnFinished = false;
     }
 
+    /** 
+     * Sends the current player to jail. 
+     */
+    public sendToJail() {
+        // Move the player to jail.
+        this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
+        this.board[10].addOccupant(this.currentPlayer);
+        this.currentPlayer.currentSquare = this.board[10];
+
+        this.currentPlayer.turnsInJail++;
+    }
+
     /**
      * Makes the current player pay to get out of prison.
      * The bail money is added to the free parking jackpot
