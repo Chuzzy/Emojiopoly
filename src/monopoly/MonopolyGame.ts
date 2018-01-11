@@ -1,5 +1,5 @@
 import * as _ from "lodash";
-import { Player, Debt, Square } from "./Monopoly";
+import { Player, Debt, Square, Card } from "./Monopoly";
 
 /**
  * A game of Monopoly.
@@ -52,6 +52,26 @@ export class MonopolyGame {
      * receiving the message as a parameter.
      */
     public messageEventHandler: (message: string) => void;
+
+    /**
+     * The cards in the chance pile.
+     */
+    public chanceCards: Card[];
+
+    /**
+     * The cards in the community chest pile.
+     */
+    public chestCards: Card[];
+
+    /**
+     * The index of the chance card to use when a player lands on chance.
+     */
+    public chanceCardIndex: number;
+
+    /**
+     * The index of the community chest card to use when a player lands on chance.
+     */
+    public chestCardIndex: number;
 
     /**
      * Adds money to the free parking jackpot and broadcasts a message
