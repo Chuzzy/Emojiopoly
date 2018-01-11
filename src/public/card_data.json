@@ -1,0 +1,169 @@
+{
+    "wtf": [
+        {
+            "text": "Feeling hungry",
+            "action": "advance",
+            "value": "hamburger"
+        },
+        {
+            "text": "Replace everyone's phones",
+            "action": "payeach",
+            "value": 50
+        },
+        {
+            "text": "Payday",
+            "action": "advance",
+            "value": "go"
+        },
+        {
+            "text": "Hitch a Taxi ride",
+            "action": "advance",
+            "value": "taxi"
+        },
+        {
+            "text": "Take a ride on the nearest transport",
+            "action": "advance",
+            "value": "transport"
+        },
+        {
+            "text": "Go back 3 spaces",
+            "action": "back",
+            "value": 3
+        },
+        {
+            "text": "Sell emoji-related merchandise",
+            "action": "earn",
+            "value": 50
+        },
+        {
+            "text": "Under arrest for selling counterfeit emoji merch",
+            "action": "gotojail"
+        },
+        {
+            "text": "Sell an iPhone X",
+            "action": "earn",
+            "value": 150
+        },
+        {
+            "text": "Upgrade to Animoji",
+            "action": "streetrepairs",
+            "value": [
+                25,
+                100
+            ]
+        },
+        {
+            "text": "Feeling moody",
+            "action": "advance",
+            "value": "lovehotel"
+        },
+        {
+            "text": "Make use of the nearest utility",
+            "action": "advance",
+            "value": "utility"
+        },
+        {
+            "text": "Purchase some new songs in Just Dance 2 for Android and iOS",
+            "action": "pay",
+            "value": 15
+        },
+        {
+            "text": "Star-struck",
+            "action": "advance",
+            "value": "star"
+        },
+        {
+            "text": "Advance to nearest transport and pay 2x",
+            "action": "doubletransport"
+        },
+        {
+            "text": "Win the jackpot",
+            "action": "advance",
+            "value": "freeparking"
+        }
+    ],
+    "omg": [
+        {
+            "text": "It's World Emoji Day",
+            "action": "earn",
+            "value": 50
+        },
+        {
+            "text": "A risky '🍆💦💦' text goes awry",
+            "action": "gotojail"
+        },
+        {
+            "text": "Net Neutrality Repealed",
+            "action": "streetrepairs",
+            "value": [
+                40,
+                115
+            ]
+        },
+        {
+            "text": "Rob someone at gunpoint",
+            "action": "stealmoney",
+            "value": 50
+        },
+        {
+            "text": "Robbed at gunpoint",
+            "action": "stolenmoney",
+            "value": 50
+        },
+        {
+            "text": "Win a free giftcard giveaway",
+            "action": "earn",
+            "value": 20
+        },
+        {
+            "text": "Refund faulty fidget spinner",
+            "action": "earn",
+            "value": 25
+        },
+        {
+            "text": "Payday",
+            "action": "advance",
+            "value": "go"
+        },
+        {
+            "text": "Dabbing in public",
+            "action": "pay",
+            "value": 100
+        },
+        {
+            "text": "🎉 Happy Birthday!",
+            "action": "collecteach",
+            "value": 50
+        },
+        {
+            "text": "Buy the latest iPhone",
+            "action": "pay",
+            "value": 150
+        },
+        {
+            "text": "Second prize in a Just Dance 2 competition",
+            "action": "earn",
+            "value": 10
+        },
+        {
+            "text": "Bulk sale of fidget spinners",
+            "action": "earn",
+            "value": 100
+        },
+        {
+            "text": "Make a viral music video using Animoji",
+            "action": "earn",
+            "value": 200
+        },
+        {
+            "text": "💯",
+            "action": "earn",
+            "value": 100
+        },
+        {
+            "text": "Make a choice - Pay 10% fine or take a ❓ card",
+            "action": "choice",
+            "value": 0.1
+        }
+    ]
+}
