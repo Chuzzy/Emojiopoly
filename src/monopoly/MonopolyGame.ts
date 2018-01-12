@@ -126,9 +126,7 @@ export class MonopolyGame {
      */
     public sendToJail() {
         // Move the player to jail.
-        this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
-        this.board[10].addOccupant(this.currentPlayer);
-        this.currentPlayer.currentSquare = this.board[10];
+        this.moveToSquare(this.board[10]);
 
         this.currentPlayer.turnsInJail++;
     }
@@ -162,11 +160,7 @@ export class MonopolyGame {
         if (this.dice[0] === this.dice[1]) {
             if (++this.consecutiveDoubles === this.houseRules.maxConsecutiveDoubles) {
                 // Send player to jail.
-                this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
-
-                this.currentPlayer.turnsInJail = 1;
-                this.currentPlayer.currentSquare = this.board[10];
-                this.currentPlayer.currentSquare.addOccupant(this.currentPlayer);
+                this.sendToJail();
 
                 this.messageEventHandler(`${this.currentPlayer.name} rolled ${this.houseRules.maxConsecutiveDoubles} doubles in a row - under arrest`);
                 this.consecutiveDoubles = 0;
@@ -186,13 +180,8 @@ export class MonopolyGame {
             newPosition -= 40;
         }
 
-        // Remove player from old square's occupants.
-        this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
-
-        // Move player to their new square.
         let newSquare: Square = this.board[newPosition];
-        newSquare.addOccupant(this.currentPlayer);
-        this.currentPlayer.currentSquare = newSquare;
+        this.moveToSquare(newSquare);
 
         // TODO: Handle action.
     }
