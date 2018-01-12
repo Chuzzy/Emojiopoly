@@ -140,6 +140,21 @@ export class MonopolyGame {
     }
 
     /**
+     * Sends the current player back the number of spaces.
+     * @param numberOfSpaces The number of spaces to move back.
+     * @throws Error if the number of spaces is greater than the current square index.
+     */
+    public moveBack(numberOfSpaces: number) {
+        let currentSquareIndex = this.board.indexOf(this.currentPlayer.currentSquare);
+
+        if (numberOfSpaces > currentSquareIndex) {
+            throw new Error(`Cannot go back ${numberOfSpaces} spaces.`);
+        }
+        
+        this.moveToSquare(this.board[currentSquareIndex - numberOfSpaces], false);
+    }
+
+    /**
      * Makes the current player pay to get out of prison.
      * The bail money is added to the free parking jackpot
      * if the rule is enabled.
