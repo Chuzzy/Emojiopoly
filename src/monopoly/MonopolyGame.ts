@@ -114,8 +114,16 @@ export class MonopolyGame {
     /**
      * Moves the current player to a new square.
      * @param newSquare The square to move the player to.
+     * @param awardSalary Whether the player should be given a salary for passing Go.
      */
-    public moveToSquare(newSquare: Square) {
+    public moveToSquare(newSquare: Square, awardSalary: boolean = true) {
+        if (awardSalary) {
+            // If the destination is behind the player
+            if (this.board.indexOf(newSquare) < this.board.indexOf(this.currentPlayer.currentSquare)) {
+                this.currentPlayer.money += this.houseRules.goSalary;
+            }
+        }
+
         this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
         newSquare.addOccupant(this.currentPlayer);
         this.currentPlayer.currentSquare = newSquare;
@@ -126,7 +134,7 @@ export class MonopolyGame {
      */
     public sendToJail() {
         // Move the player to jail.
-        this.moveToSquare(this.board[10]);
+        this.moveToSquare(this.board[10], false);
 
         this.currentPlayer.turnsInJail++;
     }
