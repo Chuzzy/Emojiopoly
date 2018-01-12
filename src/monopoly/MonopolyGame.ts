@@ -111,6 +111,16 @@ export class MonopolyGame {
         this.isTurnFinished = false;
     }
 
+    /**
+     * Moves the current player to a new square.
+     * @param newSquare The square to move the player to.
+     */
+    public moveToSquare(newSquare: Square) {
+        this.currentPlayer.currentSquare.removeOccupant(this.currentPlayer);
+        newSquare.addOccupant(this.currentPlayer);
+        this.currentPlayer.currentSquare = newSquare;
+    }
+
     /** 
      * Sends the current player to jail. 
      */
