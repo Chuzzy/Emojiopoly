@@ -173,6 +173,86 @@ export class MonopolyGame {
     }
 
     /**
+     * Takes a chance card, follows the instruction and decrements `this.chanceCardIndex`.
+     */
+    public takeChance() {
+        let card = this.chanceCards[this.chanceCardIndex];
+        this.handleCard(card);
+
+        if (--this.chanceCardIndex < 0) {
+            this.messageEventHandler("The WTF deck is being shuffled.");
+            this.chanceCards = _.shuffle(this.chanceCards);
+            this.chanceCardIndex = this.chanceCards.length - 1;
+        }
+    }
+    
+    /**
+     * Takes a community chest card, follws the instruction and decrements `this.chestCardIndex`.
+     */
+    public takeChest() {
+        let card = this.chestCards[this.chestCardIndex];
+        this.handleCard(card);
+
+        if (--this.chestCardIndex < 0) {
+            this.messageEventHandler("The OMG deck is being shuffled.");
+            this.chestCards = _.shuffle(this.chestCards);
+            this.chestCardIndex = this.chestCards.length - 1;
+        }
+    }
+
+    public handleCard(card: Card) {
+        switch (card.action) {
+            case "earn":
+                this.currentPlayer.money += card.value as number;
+                break;
+            case "pay":
+                this.unpaidDebts.push(new Debt(this, this.currentPlayer, null, card.value as number));
+                break;
+            case "back":
+                this.moveBack(card.value as number);
+                break;
+            case "collecteach":
+                this.players.forEach(player => {
+                    this.unpaidDebts.push(new Debt(this, player, this.currentPlayer, card.value as number));
+                });
+                break;
+            case "payeach":
+                this.players.forEach(player => {
+                    this.unpaidDebts.push(new Debt(this, this.currentPlayer, player, card.value as number));
+                });
+                break;
+            case "gotojail":
+                this.sendToJail();
+                break;
+            case "stealmoney":
+                this.unpaidDebts.push(new Debt(this, _.sample(this.players), this.currentPlayer, card.value as number));
+                break;
+            case "stolenmoney":
+                this.unpaidDebts.push(new Debt(this, this.currentPlayer, _.sample(this.players), card.value as number));
+                break;
+            case "streetrepairs":
+                let numberOfHouses = _.sumBy(this.currentPlayer.ownedProperties.filter(property => property.buildingsCount < 5), "buildingsCount");
+                let numberOfHotels = this.currentPlayer.ownedProperties.filter(property => property.buildingsCount === 5).length;
+
+                let totalCost = numberOfHouses * (card.value as number[])[0] + numberOfHotels * (card.value as number[])[1];
+
+                this.unpaidDebts.push(new Debt(this, this.currentPlayer, null, totalCost));
+                break;
+            case "choice":
+                // TODO: Implement choice card
+                break;
+            case "doubletransport":
+                // TODO: Implement double transport card
+                break;
+            case "advance":
+                // TODO: Implement advance to card
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
      * Move the player.
      */
     public movePlayer() {
