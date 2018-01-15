@@ -22,9 +22,9 @@ These can be viewed at https://en.wikibooks.org/wiki/Monopoly/Official_Rules.
 | `bankCoversUnpaidRent`        | Whether the bank covers for unpaid rent when a player goes bankrupt.                     | `boolean`                           |
 | `bankruptAssetsAlwaysToBank`  | Whether the bank repossesses the assets of a player who goes bankrupt to an opponent.    | `boolean`                           |
 | `purchaseMortgagedProperties` | Whether players can buy mortgaged properties from the bank.                              | `boolean`                           |
-| `freeParkingJackpot`          | The money awarded to a player when landing on Free Parking.                              | `number | "fines"`                  |
+| `freeParkingJackpot`          | The money awarded to a player when landing on Free Parking.                              | `number \| "fines"`                 |
 | `goSalary`                    | The money awarded to a player when they pass Go.                                         | `number`                            |
-| `landOnGo`                    | What happens when a player lands on Go.                                                  | `"normal"  | "double" | "freemove"` |
+| `landOnGo`                    | What happens when a player lands on Go.                                                  | `"normal" \| "double" \| "freemove"`|
 | `startingMoney`               | The amount of money players start with.                                                  | `number`                            |
 | `turnsInJail`                 | How many turns a player is allowed to stay in jail for before being forced to post bail. | `number`                            |
 | `bailAmount`                  | The amount of money a player needs to spend to pay to get out of jail.                   | `number`                            |
