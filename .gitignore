@@ -62,3 +62,6 @@ typings/
 
 # Font files
 dist/public/fonts/
+
+# VS Code files
+.vscode/
