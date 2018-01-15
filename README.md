@@ -2,7 +2,7 @@
 
 ## About
 Emojiopoly is a version of Monopoly that uses emoji instead of properties.
-It currently supports up to ${number} players.
+It currently supports up to 8 players.
 
 ## Where can I play?
 You can play Emojiopoly at our website: [emojiopolyga.me](http://emojiopolyga.me).
