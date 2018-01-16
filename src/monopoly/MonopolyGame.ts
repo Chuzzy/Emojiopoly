@@ -273,16 +273,8 @@ export class MonopolyGame {
             }
         }
 
-        // Apply the double salary rule if they passed Go.
-        if (newPosition === 40) {
-            this.currentPlayer.money += this.houseRules.goSalary;
-        }
-
-        // Collect salary if they passed Go.
-        if (newPosition > 39) {
-            this.currentPlayer.money += this.houseRules.goSalary;
-            newPosition -= 40;
-        }
+        // Adjust player position when passing Go.
+        newPosition %= 40;
 
         let newSquare: Square = this.board[newPosition];
         this.moveToSquare(newSquare);
