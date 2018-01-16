@@ -121,6 +121,7 @@ export class MonopolyGame {
             // If the destination is behind the player
             if (this.board.indexOf(newSquare) < this.board.indexOf(this.currentPlayer.currentSquare)) {
                 this.currentPlayer.money += this.houseRules.goSalary;
+                this.messageEventHandler(`${this.currentPlayer.name} collected 💷${this.houseRules.goSalary} salary`);
             }
         }
 
