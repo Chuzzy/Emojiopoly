@@ -24,7 +24,7 @@ let publicFunctions = {
             confirmButtonText: "Yes"
         }).then(result => {
             if (result.value) {
-                swal("💸", "You have filed bankruptcy.");
+                swal("💸", "You are bankrupt.");
             }
         });
     },
