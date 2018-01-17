@@ -15,6 +15,7 @@ These can be viewed at https://en.wikibooks.org/wiki/Monopoly/Official_Rules.
 | Rule                          | Description                                                                              | Type                                |
 | :---------------------------- | :--------------------------------------------------------------------------------------- | :---------------------------------- |
 | `needMonopolyToBuild`         | Whether players need a monopoly to build.                                                | `boolean`                           |
+| `doubleRentWithMortgages`     | Whether double rent can only be collected on monopolies with mortgages.                  | `boolean`                           |
 | `evenBuildRule`               | Improvements must be built on the property with the fewest buildings.                    | `boolean`                           |
 | `rentInJail`                  | Whether players can collect rent in jail.                                                | `boolean`                           |
 | `extraTurnOnRollingOutOfJail` | Whether an extra turns is awarded for rolling doubles to get out of jail.                | `boolean`                           |

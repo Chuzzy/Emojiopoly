@@ -5,6 +5,9 @@ export interface HouseRules {
     /** Whether players need a monopoly to construct improvements. */
     needMonopolyToBuild: boolean;
 
+    /** Whether double rent can only be collected on monopolies with mortgages. */
+    doubleRentWithMortgages: boolean;
+
     /** Whether players must build evenly on monopolies. */
     evenBuildRule: boolean;
 
