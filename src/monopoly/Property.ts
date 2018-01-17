@@ -29,7 +29,7 @@ export class Property {
      */
     constructor(
         public readonly name: string,
-        public readonly color: "brown" | "lightblue" | "pink" | "orange" | "red" | "yellow" | "green" | "blue",
+        public readonly color: "brown" | "lightblue" | "pink" | "orange" | "red" | "yellow" | "green" | "blue" | "white",
         public readonly price: number,
         public readonly rent: "transport" | "utility" | number[],
         public readonly buildPrice: number
